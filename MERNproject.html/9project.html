@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form!!</title>
+</head>
+<body>
+        <form action="/action.try.it.again" method="get">
+            <h1>Event Registration</h1>
+            <!-- name -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value="" /><br>
+
+            <!-- email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value="" /><br>
+
+            <!-- password -->
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" value="" /><br>
+
+            <!-- organization -->
+            <label for="occupationType">Occupation:</label><br>
+            <select name="occupationType" id="occupationType">
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+            <fieldset>
+                <legend>Topics of Interest</legend>
+                <label for="checkbox1">Html</label>
+                <input type="checkbox" name="checkbox" id="checkbox1">
+
+                <label for="checkbox2">Css</label>
+                <input type="checkbox" name="checkbox" id="checkbox2">
+
+                <label for="checkbox3">Javascript</label>
+                <input type="checkbox" name="checkbox" id="checkbox3">
+            </fieldset>
+            <label for="Comments">Comments</label><br>
+            <textarea name="textarea1" id="textarea" cols="30" rows="10"></textarea><br>
+            <input type="Submit" value="Register">
+        </form>
+</body>
+</html>
+ 

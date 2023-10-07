@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form2!!</title>
+</head>
+<body>
+      <form action="Action./try.it again" method="get">
+        <!-- Job Application -->
+        <h1>Job Application</h1>
+        <label for="Name">Name:</label><br>
+        <input type="name" id="Name" name="name"><br>
+        
+        <label for="Email">Email:</label><br>
+        <input type="email" id="Email" name="email" value=""><br>
+
+        <label for="Phone">Phone:</label><br>
+        <input type="phone" id="phone" name="phone" value=""><br>
+
+        <!-- Resume -->
+        <label for="fileupload">Resume:</label><br>
+        <input type="file" name="resume" id="resume"><br>
+
+        <!-- Experience -->
+        <label for="counter">Experience(year):</label><br>
+        <input type="number" name="counter" id="counter" min="0" max="50">
+
+        <!-- skill -->
+        <fieldset>
+            <legend>Skill:</legend>
+            <label for="checkbox1">Html</label>
+            <input type="checkbox" name="html" id="html">
+
+            <label for="checkbox2">Css</label>
+            <input type="checkbox" name="html" id="html">
+
+            <label for="checkbox3">Javascript</label>
+            <input type="checkbox" name="html" id="html">
+        </fieldset>
+
+        <!-- Higher Education -->
+        <label for="Higher Education">Higher Education:</label><br>
+        <select name="Higher Education" id="Higher Education">
+            <option value="High school">High school</option>
+            <option value="Graduation">Graduation</option>
+            <option value="Post-Graduation">Post-Graduation</option>
+        </select><br>
+        <fieldset>
+            <legend>Availability:</legend>
+        <label for="radio1">Full-Time</label>
+        <input type="radio" name="availability" id="availability" ><br>
+        <label for="radio2">Part-Time</label>
+        <input type="radio" name="availability" id="availability" ><br>
+
+        <!-- Here name is used to link both input radio type together means we can select only one option at a time in this fieldset. -->
+    </fieldset>
+    <label for="Comments">Additional Comments:</label><br>
+            <textarea name="textarea1" id="textarea" cols="30" rows="4"></textarea><br/>
+            <input type="Submit" value="Submit Application">
+      </form>
+</body>
+</html>
