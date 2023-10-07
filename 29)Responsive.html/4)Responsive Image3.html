@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <h2>Change images according to the browser width</h2>
+        <p>By using the HTML <picture> element, you can set two or more imagesaccording to the browser width. It will change the picture when you change the browser-size. i.e. desktop and phone.</p>
+            <strong>Example:</strong>
+            <pre>
+            &lt;!DOCTYPE html>  
+            &lt;html>  
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">  
+            &lt;body>  
+                &lt;h2&gt;Responsive Image&lt;/h2&gt; 
+                &lt;p>"max-width:100%" makes the image responsive and also ensures that the image   
+                doesn't get bigger than its original size.</p&gt;    
+                &lt;p>Resize the browser window to see the effect.&lt;/p&gt;  
+                &lt;picture>  
+                    &lt;source srcset="img_smallflower.jpg" media="(max-width: 600px)">(Change image)  
+                    &lt;source srcset="img_flowers.jpg" media="(max-width: 1500px)">(Change image)  
+                    &lt;source srcset="flowers.jpg">  
+                    &lt;img src="img_flowers.jpg" alt="Flowers" style="width:auto;">  
+                    &lt;/picture>    
+            &lt;/body>  
+            &lt;/html>  
+            </pre>
+    </fieldset>
+    <picture>  
+        <source srcset="../MERNproject.html/laptop.avif" media="(max-width: 600px)">(Change image)  
+        <source srcset="../MERNproject.html/pillow.jpg" media="(max-width: 1500px)">(Change image)  
+        <source srcset="flowers.jpg">  
+        <img src="../MERNproject.html/lamp.jpg" alt="lamp" style="width:auto;">  
+        </picture>  
+</body>
+</html>

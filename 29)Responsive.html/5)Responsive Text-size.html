@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Text-size</title>
+  </head>
+  <body>
+    <fieldset>
+      <h1>Responsive Text-size</h1>
+      <p>
+        We can make the text size responsive by using the "uv" unit. It means
+        viewport-width. By using this, we can make the text size to follow the
+        browserwindow screen.
+      </p>
+
+      <strong>Example:</strong>
+      <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        &lt;body>  
+        &lt;h1 style="font-size:10vw;">Here size is 10vw.&lt;/h1>  
+        &lt;p style="font-size:6vw;">Here size is 6vw.&lt;/p>  
+        &lt;p style="font-size:4vw;">Here size is 4vw.&lt;/p>  
+        &lt;p>Resize the browser window to see how the text size changes.&lt;/p>    
+        &lt;/body>  
+        &lt;/html>  
+      </pre>
+    </fieldset>
+    <h1 style="font-size: 10vw">Here size is 10vw.</h1>
+    <p style="font-size: 6vw">Here size is 6vw.</p>
+    <p style="font-size: 4vw">Here size is 4vw.</p>
+    <p>Resize the browser window to see how the text size changes.</p>
+    <br />
+    <p>
+      <strong>Note:</strong>viewport specifies the browser window size. 1vw = 1%
+      of viewport width. Means, if the viewport is 100cm wide, 1vw is 1.0cm.
+    </p>
+  </body>
+</html>
