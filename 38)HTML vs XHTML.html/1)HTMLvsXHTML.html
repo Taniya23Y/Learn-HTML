@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Versus XHTML</title>
+  </head>
+  <body>
+    <h1>HTML Versus XHTML</h1>
+    <p>XHTML is a stricter, more XML-based version of HTML.</p>
+    <hr />
+    <h2>What is XHTML?</h2>
+    <ul>
+      <li>XHTML stands for EXtensible HyperText Markup Language</li>
+      <li>XHTML is a stricter, more XML-based version of HTML</li>
+      <li>XHTML is HTML defined as an XML application</li>
+      <li>XHTML is supported by all major browsers</li>
+    </ul>
+    <hr />
+    <h2>Why XHTML?</h2>
+    <p>
+      XML is a markup language where all documents must be marked up correctly
+      (be "well-formed").
+    </p>
+    <p>
+      XHTML was developed to make HTML more extensible and flexible to work with
+      other data formats (such as XML). In addition, browsers ignore errors in
+      HTML pages, and try to display the website even if it has some errors in
+      the markup. So XHTML comes with a much stricter error handling
+    </p>
+    <hr />
+    <h2>The Most Important Differences from HTML</h2>
+    <ul>
+      <li>&lt;!DOCTYPE&gt; is <b>mandatory</b></li>
+      <li>The xmlns attribute in &lt;html&gt; is <b>mandatory</b></li>
+      <li>
+        &lt;html&gt;, &lt;head&gt;, &lt;title&gt;>, and &lt;body&gt; are
+        <b>mandatory</b>
+      </li>
+      <li>Elements must always be properly <b>nested</b></li>
+      <li>Elements must always be <b>closed</b></li>
+      <li>Elements must always be in <b>lowercase</b></li>
+      <li>Attribute names must always be in <b>lowercase</b></li>
+      <li>Attribute values must always be <b>quoted</b></li>
+      <li>Attribute minimization is <b>forbidden</b></li>
+    </ul>
+    <hr />
+    <h2>XHTML - &lt;!DOCTYPE ....&gt; Is Mandatory</h2>
+    <p>An XHTML document must have an XHTML &lt;!DOCTYPE&gt; declaration.</p>
+
+    <p>
+      The &lt;html&gt;, &lt;head&gt;, &lt;title&gt;>, and &lt;body&gt; elements
+      must also be present, and the xmlns attribute in &lt;html&gt; must specify
+      the xml namespace for the document.
+    </p>
+    <pre>
+        <strong>Example:</strong>
+        <p>Here is an XHTML document with a minimum of required tags: </p>
+        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+        &lt;html xmlns="http://www.w3.org/1999/xhtml">
+        &lt;head>
+        &lt;title>Title of document&lt;/title>
+        &lt;/head>
+        &lt;body>
+
+                some content here...
+
+        &lt;/body>
+        &lt;/html>
+    </pre&lt;
+    <hr>
+    <h2>XHTML Elements Must be Properly Nested</h2>
+    <p>In XHTML, elements must always be properly nested within each other, like this:</p>
+    <pre>
+        <strong>Good:</strong>
+        &lt;b>&lt;i>Some text&lt;/i>&lt;/b>
+    </pre>
+    <pre>
+        <strong>Wrong:</strong>
+        &lt;b>&lt;i>Some text&lt;/b>&lt;/i>
+    </pre>
+    <hr>
+    <h2>XHTML Elements Must Always be Closed</h2>
+    <p>In XHTML, elements must always be closed, like this:</p>
+    <pre>
+        <strong>Good:</strong>
+        &lt;p>This is a paragraph&lt;/p>
+        &lt;p>This is another paragraph&lt;/p>
+    </pre>
+    <pre>
+        <strong>Wrong:</strong>
+        &lt;p>This is a paragraph
+        &lt;p>This is another paragraph
+    </pre>
+    <hr>
+    <h2>XHTML Empty Elements Must Always be Closed</h2>
+    <p>In XHTML, empty elements must always be closed, like this:</p>
+    <pre>
+        <strong>Good:</strong>
+        A break: &lt;br />
+        A horizontal rule: &lt;hr />
+        An image: &lt;img src="happy.gif" alt="Happy face" />
+    </pre>
+    <pre>
+        <strong>Wrong:</strong>
+        A break: &lt;br>
+        A horizontal rule: &lt;hr>
+        An image: &lt;img src="happy.gif" alt="Happy face">
+    </pre>
+    <hr>
+    <h2>XHTML Elements Must be in Lowercase</h2>
+    <p>In XHTML, element names must always be in lowercase, like this:</p>
+    <pre>
+        <strong>Correct:</strong>
+        &lt;body>
+            &lt;p>This is a paragraph&lt;/p>
+        &lt;/body>
+    </pre>
+    <pre>
+        <strong>Wrong:</strong>
+        &lt;BODY>
+            &lt;P>This is a paragraph&lt;/P>
+        &lt;/BODY>
+    </pre>
+    <hr>
+    <h2>XHTML Attribute Names Must be in Lowercase</h2>
+    <p>In XHTML, attribute names must always be in lowercase, like this:</p>
+    <pre>
+        <strong>Correct:</strong>
+        &lt;a href="https://www.w3schools.com/html/">Visit our HTML tutorial&lt;/a>
+    </pre>
+    <pre>
+        <strong>Wrong:</strong>
+        &lt;a HREF="https://www.w3schools.com/html/">Visit our HTML tutorial&lt;/a>
+    </pre>
+    <hr>
+    <h2>XHTML Attribute Values Must be Quoted</h2>
+    <p>In XHTML, attribute values must always be quoted, like this:</p>
+    <pre>
+        <strong>Correct:</strong>
+        &lt;a href="https://www.w3schools.com/html/">Visit our HTML tutorial&lt;/a>
+    </pre>
+    <pre>
+        <strong>Wrong:</strong>
+        &lt;a href=https://www.w3schools.com/html/>Visit our HTML tutorial&lt;/a>
+    </pre>
+    <hr>
+    <h2>XHTML Attribute Minimization is Forbidden</h2>
+    <p>In XHTML, attribute minimization is forbidden:</p>
+    <pre>
+        <strong>Correct:</strong>
+        &lt;input type="checkbox" name="vehicle" value="car" checked="checked" />
+        &lt;input type="text" name="lastname" disabled="disabled" />
+    </pre>
+    <pre>
+        <strong>Wrong:</strong>
+        &lt;input type="checkbox" name="vehicle" value="car" checked />
+        &lt;input type="text" name="lastname" disabled />
+    </pre>
+  </body>
+</html>
