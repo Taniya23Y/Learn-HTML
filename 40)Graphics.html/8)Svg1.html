@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG</title>
+    <style>
+        table,th{
+            background-color: aqua;
+            border-spacing: 1px;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <h1>HTML SVG</h1>
+    <p>The HTML SVG is an acronym which stands for Scalable Vector Graphics.</p>
+    <p>
+      HTML SVG is a modularized language which is used to describe graphics in
+      XML. It describe two-dimensional vector and mixed vector/raster graphics
+      in XML. It is a W3C recommendation. SVG images and their behaviors are
+      defined in XML text files. So as XML files, you can create and edit an SVG
+      image with text editor, but generally drawing programs like inkspace are
+      preferred to create it.
+    </p>
+    <p>
+      SVG is mostly used for vector type diagrams like pie charts, 2-Dimensional
+      graphs in an X,Y coordinate system etc.
+    </p>
+    <p>
+      The &lt;svg> element specifies the root of a SVG fragment. You can animate
+      every element and every attribute in SVG files
+    </p>
+    <hr />
+    <ul>
+      <p>What is SVG?</p>
+      <li>SVG stands for Scalable Vector Graphics</li>
+      <li>SVG is used to define graphics for the Web</li>
+      <li>SVG is a W3C recommendation</li>
+    </ul>
+    <hr />
+    <h2>The HTML &lt;svg&gt; Element</h2>
+    <p>The HTML &lt;svg&gt; element is a container for SVG graphics.</p>
+    <p>
+      SVG has several methods for drawing paths, boxes, circles, text, and
+      graphic images.
+    </p>
+    <hr />
+    <h2>SVG Circle</h2>
+    <pre>
+        &lt;svg width="100" height="100">
+            &lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+          &lt;/svg>
+    </pre>
+    <hr />
+    <svg width="100" height="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="green"
+        stroke-width="4"
+        fill="yellow"
+      />
+    </svg>
+    <hr />
+    <h2>SVG Rectangle</h2>
+    <pre>
+        &lt;svg width="400" height="100">
+            &lt;rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+          &lt;/svg>
+      </pre
+    >
+    <hr />
+    <svg width="400" height="100">
+      <rect
+        width="400"
+        height="100"
+        style="fill: rgb(0, 0, 255); stroke-width: 10; stroke: rgb(0, 0, 0)"
+      />
+    </svg>
+    <hr />
+    <h2>SVG Rounded Rectangle</h2>
+    <pre>
+        &lt;svg width="400" height="180">
+            &lt;rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+          &lt;/svg>
+      </pre
+    >
+    <hr />
+    <svg width="400" height="180">
+      <rect
+        x="50"
+        y="20"
+        rx="20"
+        ry="20"
+        width="150"
+        height="150"
+        style="fill: red; stroke: black; stroke-width: 5; opacity: 0.5"
+      />
+    </svg>
+    <hr />
+    <h2>SVG Star</h2>
+    <pre>
+        &lt;svg width="300" height="200">
+            &lt;polygon points="100,10 40,198 190,78 10,78 160,198"
+            style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+          &lt;/svg>
+      </pre
+    >
+    <hr />
+    <svg width="300" height="200">
+      <polygon
+        points="100,10 40,198 190,78 10,78 160,198"
+        style="fill: lime; stroke: purple; stroke-width: 5; fill-rule: evenodd"
+      />
+    </svg>
+    <hr />
+    <h2>SVG Logo</h2>
+    <pre>
+        &lt;svg height="130" width="500">
+            &lt;defs>
+              &lt;linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                &lt;stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                &lt;stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              &lt;/linearGradient>
+            &lt;/defs>
+            &lt;ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+            &lt;text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG&lt;/text>
+            Sorry, your browser does not support inline SVG.
+          &lt;/svg>
+      </pre
+    >
+    <hr />
+    <svg height="130" width="500">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop
+            offset="0%"
+            style="stop-color: rgb(255, 255, 0); stop-opacity: 1"
+          />
+          <stop
+            offset="100%"
+            style="stop-color: rgb(255, 0, 0); stop-opacity: 1"
+          />
+        </linearGradient>
+      </defs>
+      <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+      <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+        SVG
+      </text>
+      Sorry, your browser does not support inline SVG.
+    </svg>
+    <hr />
+    <h2>Differences Between SVG and Canvas</h2>
+    <p>SVG is a language for describing 2D graphics in XML.</p>
+    <p>Canvas draws 2D graphics, on the fly (with a JavaScript).</p>
+    <p>
+      SVG is XML based, which means that every element is available within the
+      SVG DOM. You can attach JavaScript event handlers for an element.
+    </p>
+    <p>
+      In SVG, each drawn shape is remembered as an object. If attributes of an
+      SVG object are changed, the browser can automatically re-render the shape.
+    </p>
+    <p>
+      Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn,
+      it is forgotten by the browser. If its position should be changed, the
+      entire scene needs to be redrawn, including any objects that might have
+      been covered by the graphic.
+    </p>
+    <hr>
+    <h2>Comparison of Canvas and SVG</h2>
+    <p>The table below shows some important differences between Canvas and SVG:</p>
+    <table class="ws-table-all notranslate" border="1px;">
+        <tr>
+        <th style="width:50%">Canvas</th>
+        <th style="width:50%">SVG</th>
+        </tr>
+        <tr>
+        <td>
+        <ul>
+          <li>Resolution dependent</li>
+          <li>No support for event handlers</li>
+          <li>Poor text rendering capabilities</li>
+          <li>You can save the resulting image as .png or .jpg</li>
+          <li>Well suited for graphic-intensive games</li>
+        </ul>
+        </td>
+        <td>
+        <ul>
+          <li>Resolution independent</li>
+          <li>Support for event handlers</li>
+          <li>Best suited for applications with large rendering areas (Google Maps)</li>
+          <li>Slow rendering if complex (anything that uses the DOM a lot will be slow)</li>
+          <li>Not suited for game applications</li>
+        </ul>
+        </td>
+        </tr>
+        </table>
+  </body>
+</html>
