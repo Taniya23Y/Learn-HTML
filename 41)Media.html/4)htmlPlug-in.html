@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Plug-in</title>
+</head>
+<body>
+    <h1>HTML Plug-ins</h1>
+    <p>Plug-ins are computer programs that extend the standard functionality of the browser.</p>
+    <hr>
+    <ul>
+        <h1>Plug-ins</h1>
+        <p>Plug-ins were designed to be used for many different purposes:</p>
+        <li>To run Java applets</li>
+        <li>To run Microsoft ActiveX controls</li>
+        <li>To display Flash movies</li>
+        <li>To display maps</li>
+        <li>To scan for viruses</li>
+        <li>To verify a bank id</li>
+        <p><strong>Warning!</strong>Most browsers no longer support Java Applets and Plug-ins.</p>
+            <p> ActiveX controls are no longer supported in any browsers.</p>
+            <p>The support for Shockwave Flash has also been turned off in modern browsers.</p>
+    </ul>
+    <hr>
+    <h2>The &lt;object> Element</h2>
+    <p>The &lt;object> element is supported by all browsers.</p>
+    <p>The &lt;object> element defines an embedded object within an HTML document.</p>
+    <p>It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML:</p>
+    <hr>
+    <strong>Example</strong>
+    <pre>
+        &lt;object width="100%" height="500px" data="snippet.html">&lt;/object>
+    </pre>
+    <hr>
+    <object width="100%" height="500px" data="snippet.html"></object>
+    <hr>
+    <p>Or images if you like:</p>
+    <strong>Example</strong>
+    <pre>
+        &lt;object data="audi.jpeg">&lt;/object>
+    </pre>
+    <hr>
+    <h2>The &lt;embed> Element</h2>
+    <p>The &lt;embed> element is supported in all major browsers.</p>
+    <p>The &lt;embed> element also defines an embedded object within an HTML document.</p>
+    <p>Web browsers have supported the &lt;embed> element for a long time. However, it has not been a part of the HTML specification before HTML5.</p>
+    <strong>Example</strong>
+    <pre>
+        &lt;embed src="audi.jpeg">
+    </pre>
+    <p><strong>Note</strong> that the &lt;embed> element does not have a closing tag. It can not contain alternative text.</p>
+    <hr>
+    <p>The &lt;embed> element can also be used to include HTML in HTML:</p>
+    <strong>Example</strong>
+    <pre>
+        &lt;embed width="100%" height="500px" src="snippet.html">
+    </pre>
+</body>
+</html>

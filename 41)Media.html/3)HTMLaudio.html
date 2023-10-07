@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Audio</title>
+    <style>
+        table,td,th {
+            border-collapse: collapse;
+            width: 40%;
+            text-align: center;
+        }
+        tr {
+            border-bottom: 1px solid #ddd;
+        }
+        td,th{
+            padding: 10px;
+        }
+        tr:hover {
+            background-color: #29d9e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Audio</h1>
+    <p>The HTML &lt;audio&gt; element is used to play an audio file on a web page.</p>
+    <p>HTML audio tag is used to define sounds such as music and other audio clips. Currently there are three supported file format for HTML 5 audio tag.</p>
+    <ol>
+        <li>mp3</li>
+        <li>wav</li>
+        <li>ogg</li>
+    </ol>
+    <p>HTML5 supports &lt;video&gt; and &lt;audio&gt; controls. The Flash, Silverlight and similar technologies are used to play the multimedia items.</p>
+    <p>This table defines that which web browser supports which audio file format.</p>
+    <hr>
+    <h2>HTML Audio Tag Example</h2>
+    <p>Let's see the code to play mp3 file using HTML audio tag.</p>
+    <pre>
+        &lt;audio controls&gt;
+            &lt;source src="koyal.mp3" type="audio/mpeg">  
+          Your browser does not support the html audio tag.  
+          &gt;/audio>  
+    </pre>
+    <hr>
+    <audio controls>  
+        <source src="../MERNproject.html/audioFile.mp3" type="audio/mp3">  
+      Your browser does not support the html audio tag.  
+      </audio>  
+      <hr>
+      <h2>Attributes of HTML Audio Tag</h2>
+      <p>There is given a list of HTML audio tag.</p>
+      <table class="alt">
+        <tr><th>Attribute</th><th>Description</th></tr>
+        <tr><td>controls</td><td>It defines the audio controls which is displayed with play/pause buttons.</td></tr>
+        <tr><td>autoplay</td><td>It specifies that the audio will start playing as soon as it is ready.</td></tr>
+        <tr><td>loop</td><td>It specifies that the audio file will start over again, every time when it is completed.</td></tr>
+        <tr><td>muted</td><td>It is used to mute the audio output.</td></tr>
+        <tr><td>preload</td><td>It specifies the author view to upload audio file when the page loads.</td></tr>
+        <tr><td>src</td><td>It specifies the source URL of the audio file.</td></tr>
+        </table>
+      <hr>
+      <h2>HTML Audio Tag Attribute Example</h2>
+      <p>Here we are going to use controls, autoplay, loop and src attributes of HTML audio tag</p>
+      <pre>
+        &lt;audio controls autoplay loop>  
+            &lt;source src="koyal.mp3" type="audio/mpeg">&lt;/audio>  
+      </pre>
+      
+      <audio controls autoplay loop>  
+        <source src="../MERNproject.html/audioFile.mp3" type="audio/mp3"></audio>
+        <hr>
+        <h2>MIME Types for HTML Audio format</h2>
+        <p>The available MIME type HTML audio tag is given below.</p>
+        <table>
+            <tr>
+                <th>Audio Format</th>
+                <th>MIME Type</th>
+            </tr>
+            <tr><td>mp3</td><td>audio/mpeg</td></tr>
+            <tr><td>ogg</td><td>audio/ogg</td></tr>
+            <tr><td>wav</td><td>audio/wav</td></tr>
+        </table>
+</body>
+</html>

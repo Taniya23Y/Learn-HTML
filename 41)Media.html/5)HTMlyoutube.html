@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Youtube</title>
+  </head>
+  <body>
+    <h1>HTML YouTube Videos</h1>
+    <p>The easiest way to play videos in HTML, is to use YouTube.</p>
+    <hr />
+    <h2>Struggling with Video Formats?</h2>
+    <p>
+      Converting videos to different formats can be difficult and
+      time-consuming.
+    </p>
+    <p>
+      An easier solution is to let YouTube play the videos in your web page.
+    </p>
+    <hr />
+    <h2>YouTube Video Id</h2>
+    <p>
+      YouTube will display an id (like tgbNymZ7vqY), when you save (or play) a
+      video.
+    </p>
+    <p>You can use this id, and refer to your video in the HTML code.</p>
+    <hr />
+    <h2>Playing a YouTube Video in HTML</h2>
+    <p>To play your video on a web page, do the following:</p>
+    <ul>
+      <li>Upload the video to YouTube</li>
+      <li>Take a note of the video id</li>
+      <li>Define an &lt;iframe> element in your web page</li>
+      <li>Let the src attribute point to the video URL</li>
+      <li>
+        Use the width and height attributes to specify the dimension of the
+        player
+      </li>
+      <li>Add any other parameters to the URL (see below)</li>
+    </ul>
+    <strong> Example</strong>
+    <pre>
+         &lt;iframe width="420" height="315"
+         &lt;src="https://www.youtube.com/embed/tgbNymZ7vqY">
+         &lt;/iframe>
+    </pre>
+    <hr />
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/embed?v=fb4rgYbi84c&list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD&index=12"
+    >
+    </iframe>
+    <hr />
+    <h2>YouTube Autoplay + Mute</h2>
+    <p>
+      You can let your video start playing automatically when a user visits the
+      page, by adding autoplay=1 to the YouTube URL. However, automatically
+      starting a video is annoying for your visitors!
+    </p>
+    <p>
+      <strong>Note:</strong> Chromium browsers do not allow autoplay in most
+      cases. However, muted autoplay is always allowed.
+    </p>
+    <p>
+      Add mute=1 after autoplay=1 to let your video start playing automatically
+      (but muted).
+    </p>
+    <pre>
+        &lt;iframe width="420" height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+        &lt;/iframe>
+    </pre>
+    <hr />
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/embed?v=fb4rgYbi84c&list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD&index=12autoplay=1&mute=1"
+    >
+    </iframe>
+    <hr />
+    <h2>YouTube Playlist</h2>
+    <p>
+      A comma separated list of videos to play (in addition to the original
+      URL).
+    </p>
+    <hr />
+    <h2>YouTube Loop</h2>
+    <p>Add loop=1 to let your video loop forever.</p>
+    <p>Value 0 (default): The video will play only once.</p>
+    <p>Value 1: The video will loop (forever).</p>
+    <pre>
+        &lt;iframe width="420" height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+        &lt;/iframe>
+    </pre>
+    <hr />
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/embed?v=fb4rgYbi84c&list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD&index=12?&loop=1">
+    </iframe>
+    <hr />
+    <h2>YouTube Controls</h2>
+    <p>Add controls=0 to not display controls in the video player.</p>
+    <p>Value 0: Player controls does not display.</p>
+    <p>Value 1 (default): Player controls display.</p>
+    <pre>
+        &lt;iframe width="420" height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+        &lt;/iframe>
+    </pre>
+    <hr>
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/embed?v=fb4rgYbi84c&list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD&index=12?controls=0">
+    </iframe>
+<hr>
+  </body>
+</html>

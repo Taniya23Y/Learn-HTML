@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Video</title>
+  </head>
+  <body>
+    <h1>HTML Video</h1>
+    <p>The HTML &lt;video&gt; element is used to show a video on a web page.</p>
+    <p>
+      HTML 5 supports &lt;video&gt; tag also. The HTML video tag is used for
+      streaming video files such as a movie clip, song clip on the web page.
+    </p>
+    <p>
+      Currently, there are three video formats supported for HTML video tag:
+    </p>
+    <ul>
+      <li>mp4</li>
+      <li>webM</li>
+      <li>ogg</li>
+    </ul>
+    <p>
+      Let's see the table that defines which web browser supports video file
+      format.
+    </p>
+    <table border="1px;">
+      <tr>
+        <th>Browser</th>
+        <th>mp4</th>
+        <th>webM</th>
+        <th>ogg</th>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="https://static.javatpoint.com/htmlpages/images/ie_browser.png"
+            alt="ie browser"
+          />
+          Internet Explorer
+        </td>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="https://static.javatpoint.com/htmlpages/images/chrome_browser.png"
+            alt="chrome browser"
+          />
+          Google Chrome
+        </td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="https://static.javatpoint.com/htmlpages/images/firefox_browser.png"
+            alt="firefox browser"
+          />
+          Mozilla Firefox
+        </td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="https://static.javatpoint.com/htmlpages/images/opera_browser.png"
+            alt="opera browser"
+          />
+          Opera
+        </td>
+        <td>no</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="https://static.javatpoint.com/htmlpages/images/safari_browser.png"
+            alt="safari browser"
+          />
+          Apple Safari
+        </td>
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>HTML Video Formats</h2>
+    <p>
+      There are three supported video formats: MP4, WebM, and Ogg. The browser
+      support for the different formats is:
+    </p>
+    <table class="ws-table-all notranslate" border="1px;">
+      <tr>
+        <th style="width: 25%">Browser</th>
+        <th style="width: 25%">MP4</th>
+        <th style="width: 25%">WebM</th>
+        <th style="width: 25%">Ogg</th>
+      </tr>
+      <tr>
+        <td>Edge</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>YES</td>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>YES</td>
+      </tr>
+      <tr>
+        <td>Firefox</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>YES</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>NO</td>
+      </tr>
+      <tr>
+        <td>Opera</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>YES</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>HTML Video - Media Types</h2>
+    <table class="ws-table-all notranslate" id="table1" border="2px;">
+      <tr>
+        <th style="width: 50%">File Format</th>
+        <th style="width: 50%">Media Type</th>
+      </tr>
+      <tr>
+        <td>MP4</td>
+        <td>video/mp4</td>
+      </tr>
+      <tr>
+        <td>WebM</td>
+        <td>video/webm</td>
+      </tr>
+      <tr>
+        <td>Ogg</td>
+        <td>video/ogg</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>HTML Video - Methods, Properties, and Events</h2>
+    <p>
+      The HTML DOM defines methods, properties, and events for the &lt;video>
+      element.
+    </p>
+    <p>
+      This allows you to load, play, and pause videos, as well as setting
+      duration and volume.
+    </p>
+    <p>
+      There are also DOM events that can notify you when a video begins to play,
+      is paused, etc.
+    </p>
+    <pre>
+        <strong>Example: Using JavaScript</strong>
+        &lt;!DOCTYPE html> 
+        &lt;html> 
+        &lt;body> 
+
+        &lt;div style="text-align:center"> 
+          &lt;button onclick="playPause()">Play/Pause&lt;/button> 
+          &lt;button onclick="makeBig()">Big&lt;/button>
+          &lt;button onclick="makeSmall()">Small&lt;/button>
+          &lt;button onclick="makeNormal()">Normal&lt;/button>
+          &lt;br>&lt;br>
+          &lt;video id="video1" width="420">
+            &lt;source src="mov_bbb.mp4" type="video/mp4">
+            &lt;source src="mov_bbb.ogg" type="video/ogg">
+            Your browser does not support HTML video.
+          &lt;/video>
+        &lt;/div> 
+
+        &lt;script> 
+        var myVideo = document.getElementById("video1"); 
+
+        function playPause() { 
+          if (myVideo.paused) 
+            myVideo.play(); 
+          else 
+            myVideo.pause(); 
+        } 
+
+        function makeBig() { 
+            myVideo.width = 560; 
+        } 
+
+        function makeSmall() { 
+            myVideo.width = 320; 
+        } 
+
+        function makeNormal() { 
+            myVideo.width = 420; 
+        } 
+        &lt;/script> 
+
+        &lt;p>Video courtesy of &lt;a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny&lt;/a>.&lt;/p>
+
+        &lt;/body> 
+        &lt;/html>
+    </pre>
+    <hr />
+    <div style="text-align: center">
+      <button onclick="playPause()">Play/Pause</button>
+      <button onclick="makeBig()">Big</button>
+      <button onclick="makeSmall()">Small</button>
+      <button onclick="makeNormal()">Normal</button>
+      <br /><br />
+      <video id="video1" width="420">
+        <source src="../MERNproject.html/videoFile.mp4" type="video/mp4" />
+        <source src="../MERNproject.html/videoFile.mp4" type="video/ogg" />
+        Your browser does not support HTML video.
+      </video>
+    </div>
+
+    <script>
+      var myVideo = document.getElementById("video1");
+
+      function playPause() {
+        if (myVideo.paused) myVideo.play();
+        else myVideo.pause();
+      }
+
+      function makeBig() {
+        myVideo.width = 560;
+      }
+
+      function makeSmall() {
+        myVideo.width = 320;
+      }
+
+      function makeNormal() {
+        myVideo.width = 420;
+      }
+    </script>
+
+    <p>
+      Video courtesy of
+      <a
+        href="https://www.google.com/search?q=anya+forger&oq=anya+forger&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDsyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgASoAgCwAgA&sourceid=chrome&ie=UTF-8"
+        target="_blank"
+        >The Anya Forger!!</a
+      >.
+    </p>
+    <hr />
+    <h2>HTML Video - Media Types</h2>
+    <table class="ws-table-all notranslate" id="table1" border="1px;">
+      <tr>
+        <th style="width: 50%">File Format</th>
+        <th style="width: 50%">Media Type</th>
+      </tr>
+      <tr>
+        <td>MP4</td>
+        <td>video/mp4</td>
+      </tr>
+      <tr>
+        <td>WebM</td>
+        <td>video/webm</td>
+      </tr>
+      <tr>
+        <td>Ogg</td>
+        <td>video/ogg</td>
+      </tr>
+    </table>
+  </body>
+</html>
