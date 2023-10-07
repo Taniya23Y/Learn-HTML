@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using The id Attribute in JavaScript</title>
+    <script>
+      function viewdate() {
+        var x = document.getElementById("dob").value;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <section>
+        <h1>Using The id Attribute in JavaScript</h1>
+        <p>
+          The id attribute can also be used by JavaScript to perform some tasks
+          for that specific element.
+        </p>
+
+        <p>
+          JavaScript can access an element with a specific id with the
+          getElementById() method:
+        </p>
+      </section>
+      <strong>Example:</strong>
+      <p>Use the id attribute to manipulate text with JavaScript:</p>
+      <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;body&gt;
+
+                        &lt;h2&gt;Using The id Attribute in JavaScript&lt;/h2&gt;
+                        &lt;p&gt;JavaScript can access an element with a specified id by using the getElementById() method:&lt;/p&gt;
+
+                        &lt;h1 id="myHeader"&gt;Hello World!&lt;/h1&gt;
+                        &lt;button onclick="displayResult()"&gt;Change text&lt;/button&gt;
+
+                        &lt;script&gt;
+                            function displayResult() {
+                                document.getElementById("myHeader").innerHTML = "Have a nice day!";
+                            }
+                        &lt;/script&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+      </pre>
+    </fieldset>
+    <h2>Using The id Attribute in JavaScript</h2>
+    <p>
+      JavaScript can access an element with a specified id by using the
+      getElementById() method:
+    </p>
+
+    <h1 id="myHeader">Hello World!</h1>
+    <button onclick="displayResult()">Change text</button>
+
+    <script>
+      function displayResult() {
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+      }
+    </script>
+    <br />
+    <fieldset>
+      <p>
+        <strong>Example:</strong>The following example describes how to use the
+        ID attribute in JavaScript.
+      </p>
+      <section>
+        <pre>
+              &lt;!DOCTYPE html&gt;  
+                &lt;html&gt;   
+                  &lt;head&gt;   
+                    &lt;title&gt; Date Attribute &lt;/title&gt;   
+                    &lt;script&gt;   
+                    function viewdate() {   
+                        var x = document.getElementById("dob").value;   
+                        document.getElementById("demo").innerHTML = x;   
+                    }
+                    &lt;/script&gt;   
+                  &lt;/head&gt;   
+                  &lt;body&gt;   
+                    Employee Name: &lt;input type="text" placeholder="Your Good name"/&gt;   
+                    &lt;br&gt;  
+                    &lt;br&gt;  
+                    Date of Joining:   
+                    &lt;input type="date" id="dob"&gt;  
+                    &lt;br&gt;   
+                    &lt;button onclick="viewdate()"&gt; Submit &lt;/button&gt;   
+                    &lt;br&gt;  
+                    &lt;h2 id="demo"&gt; &lt;/h2&gt;   
+                  &lt;/body&gt;   
+                &lt;/html&gt;  
+        </pre>
+      </section>
+    </fieldset>
+    Employee Name: <input type="text" placeholder="Your Good name" />
+    <br />
+    <br />
+    Date of Joining:
+    <input type="date" id="dob" />
+    <br />
+    <button onclick="viewdate()">Submit</button>
+    <br />
+    <h2 id="demo"></h2>
+  </body>
+</html>

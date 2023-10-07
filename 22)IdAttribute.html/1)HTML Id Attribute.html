@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Id Attribute</title>
+    <style>
+        #myHeader {
+          background-color: lightblue;
+          color: black;
+          padding: 40px;
+          text-align: center;
+        }
+        </style>
+  </head>
+  <body>
+    <fieldset>
+      <section>
+        <h1>HTML Id Attribute</h1>
+        <p>
+          The <strong>Id</strong> attribute is used to specify the unique ID for
+          an element of the HTML document. It allocates the unique identifier
+          which is used by the <strong>CSS</strong> and the
+          <strong>JavaScript</strong> for performing certain tasks.
+        </p>
+        <p>
+          <strong>Note:</strong> In the Cascading Style sheet (CSS), we can
+          easily select an element with the specific id by using the # symbol
+          followed by id.
+        </p>
+        <p>
+          <strong>Note:</strong> JavaScript can access an element with the given
+          ID by using the getElementById() method.
+        </p>
+
+        <strong>Syntax:</strong><br />
+        <p>&lt;tag id="value"&gt;</p>
+      </section>
+      <fieldset>
+        <p>
+          The HTML id attribute is used to specify a unique id for an HTML
+          element.
+        </p>
+        <p>
+          You cannot have more than one element with the same id in an HTML
+          document.
+        </p>
+        <h1>Using The id Attribute</h1>
+        <ul>
+          <li>
+            The id attribute specifies a unique id for an HTML element. The
+            value of the id attribute must be unique within the HTML document.
+          </li>
+          <li>
+            The id attribute is used to point to a specific style declaration in
+            a style sheet. It is also used by JavaScript to access and
+            manipulate the element with the specific id.
+          </li>
+          <li>
+            The syntax for id is: write a hash character (#), followed by an id
+            name. Then, define the CSS properties within curly braces {}.
+          </li>
+          <li>
+            In the following example we have an &lt;h1&gt; element that points
+            to the id name "myHeader". This &lt;h1&gt; element will be styled
+            according to the #myHeader style definition in the head section:
+          </li>
+        </ul>
+        <div>
+          <strong>Example:</strong>
+          <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
+                        #myHeader {
+                          background-color: lightblue;
+                          color: black;
+                          padding: 40px;
+                          text-align: center;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+
+                    &lt;h1 id="myHeader"&gt;My Header&lt;/h1&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </pre
+          >
+        </div>
+        <p><strong>Note:</Strong> The id name is case sensitive!</p>
+        <p><strong>Note:</strong>Note: The id name must contain at least one character, cannot start with a number, and must not contain whitespaces (spaces, tabs, etc.).</strong></p>
+      </fieldset>
+    </fieldset>
+    <h1 id="myHeader">My Header</h1>
+  </body>
+</html>
