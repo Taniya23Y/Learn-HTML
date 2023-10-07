@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Attribute in JavaScript</title>
+  </head>
+  <body>
+    <section>
+      <h1>Class Attribute in JavaScript</h1>
+      <p>
+        You can use JavaScript access elements with a specified class name by
+        using the getElementsByClassName() method.
+      </p>
+      <h2><strong>Example:</strong></h2>
+      <p>
+        Let's hide all the elements with class name "fruit" when the user click
+        on the button.
+      </p>
+    </section>
+    <section>
+        <h2>Class Attribute With JavaScript</h2>
+        <p>Click the button, to hide all element with the help of class name"fruit", with javascript</p>
+
+        <button onclick="myFunction()">Hide elements</button>
+
+        <h2 class="fruit">Mango</h2>
+        <p>Mango is King of all fruits.</p>
+        <h2 class="fruit">Orange</h2>
+        <p>Oranges are full of vitamin C.</p>
+        <h2 class="fruit">Apple</h2>
+        <p>An Apple a day, keep the Doctor away.</p>
+    </section>
+
+    <!-- script for javascript -->
+    <script>
+        function myFunction(){
+            var x = document.getElementsByClassName("fruit");
+            for(var i = 0; i < x.length; i++){
+                x[i].style.display = "none";
+            }
+        }
+    </script>
+    <hr>
+    <hr>
+    <pre>
+        code for the above action!!!
+        <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &#x9;&lt;head&gt;
+            &#x9;&#x9;&lt;!-- Required meta tags --&gt;
+            &#x9;&#x9;&lt;meta charset=&quot;utf-8&quot;/&gt;
+            &#x9;&#x9;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+            &#x9;&#x9;&lt;title&gt;Document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &#x9;&#x9;&lt;h2&lt;Class Attribute in JavaScript&lt;h2&gt;
+            &#x9;&#x9;&lt;p&gt;Click the button, to hide all element with the help of class name"fruit", with javascript&lt;p&gt;
+            &#x9;&#x9;&lt;button onclick=&quot;myFunction()&quot;&gt;Hide element&lt;/button&gt;
+
+            &#x9;&#x9;&lt;h2 class=&quot;fruit&quot;>Mango&lt;/h2&gt;
+            &#x9;&#x9;&lt;p&gt;Mango is King of all fruits.&lt;/p&gt;
+            &#x9;&#x9;&lt;h2 class=&quot;fruit&quot;>Orange&lt;/h2&gt;
+            &#x9;&#x9;&lt;p&lt;Oranges are full of vitamin C.&lt;/p&gt;
+            &#x9;&#x9;&lt;h2 class=&quot;fruit&quot;&gt;Apple&lt;/h2&gt;
+            &#x9;&#x9;&lt;p&gt;An Apple a day, keep the Doctor away.&lt;/p&gt;
+
+            &#x9;&#x9;&lt;!-- script for javascript --&gt;
+            &#x9;&#x9;&lt;script&gt;
+            &#x9;&#x9;&#x9;function myFunction(){
+                &#x9;&#x9;&#x9;var x = document.getElementsByClassName(&quot;fruit&quot;);
+                &#x9;&#x9;&#x9;&#x9;&#x9;for(var i = 0; i &lt; x.length; i++){
+                    &#x9;&#x9;&#x9;&#x9;x[i].style.display = &quot;none&quot;;
+                    &#x9;&#x9;&#x9;&#x9;}
+                    &#x9;&#x9;}
+            &#x9;&#x9;&lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </pre>
+    </pre>
+  </body>
+</html>
