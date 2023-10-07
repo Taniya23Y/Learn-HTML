@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Emojis</title>
+  </head>
+  <body>
+    <h1>Html Emojis</h1>
+    <p>Emojis are characters from the UTF-8 character set: 😄 😍 💗</p>
+    <hr />
+    <h2>What is Emojis ?</h2>
+    <p>Emojis look like images, or icons, but they are not.</p>
+    <p>They are letters (characters) from the UTF-8 (Unicode) character set.</p>
+    <p>UTF-8 covers almost all of the characters and symbols in the world.</p>
+    <hr>
+    <h2>The Html charset Attribute</h2>
+    <p>To display an HTML page correctly, a web browser must know the character set used in the page.</p>
+    <p>This is specified in the &lt;meta> tag:</p>
+    <pre>
+        &lt;meta charset="UTF-8" /&gt;
+        <strong>If not specified, UTF-8 is the default character set in HTML.</strong>
+    </pre>
+    <hr>
+    <h2>UTF-8 Characters</h2>
+    <ul>
+        <p>Many UTF-8 characters cannot be typed on a keyboard, but they can always be displayed using numbers (called entity numbers):</p>
+        <li>A is 65</li>
+        <li>B is 66</li>
+        <li>C is 67</li>
+    </ul>
+    <pre>
+        &lt;!DOCTYPE html>
+        &lt;html>
+        &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;/head>
+        &lt;body>
+
+        &lt;p>I will display A B C&lt;/p>
+        &lt;p>I will display &#65; &#66; &#67;&lt;/p>
+
+        &lt;/body>
+        &lt;/html>
+    </pre>
+    <p>Example Explained</p>
+    <p>The &lt;meta charset="UTF-8"&gt; element defines the character set.</p>
+    <p>The characters A, B, and C, are displayed by the numbers 65, 66, and 67.</p>
+    <p>To let the browser understand that you are displaying a character, you must start the entity number with &# and end it with ; (semicolon).</p>
+    <hr>
+    <h2>Emoji Characters</h2>
+    <ul>
+        <p>Emojis are also characters from the UTF-8 alphabet:</p>
+        <li>😄 is 128516</li>
+        <li>😍 is 128525</li>
+        <li>💗 is 128151</li>
+    </ul>
+    <pre>
+        <strong>Example</strong>
+            &lt;!DOCTYPE html>
+            &lt;html>
+            &lt;head>
+            &lt;meta charset="UTF-8">
+            &lt;/head>
+            &lt;body>
+
+            &lt;h1>My First Emoji&lt;/h1>
+
+            &lt;p>&#128512;&lt;/p>
+
+            &lt;/body>
+            &lt;/html>
+    </pre>
+    <hr>
+    <p>Since Emojis are characters, they can be copied, displayed, and sized just like any other character in HTML.</p>
+    <pre>
+        <strong>Example</strong>
+        &lt;!DOCTYPE html>
+            &lt;html>
+            &lt;head>
+            &lt;meta charset="UTF-8">
+            &lt;/head>
+            &lt;body>
+            &lt;h1>Sized Emojis&lt;/h1>
+            &lt;p style="font-size:48px">
+            &#128512; &#128516; &#128525; &#128151;
+            &lt;/p>
+            &lt;/body>
+            &lt;/html>
+    </pre>
+  </body>
+</html>
