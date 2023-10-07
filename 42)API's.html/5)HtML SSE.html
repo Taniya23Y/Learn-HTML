@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTml SSE</title>
+    <style type="text/css">  
+        div{  
+          text-align: center;  
+          background-color: #98f5ff;  
+        }  
+      </style> 
+</head>
+<body>
+    <h1>HTML5 Server-Sent Event</h1>
+    <p>The HTML5 server-sent event enables a browser to receive automatic updates and data from a server via HTTP connections.</p>
+    <hr>    
+    <h2>What are the Server-Sent Events?</h2>
+    <p>Whenever we perform some event and send it to the server such as by submitting the form to the server. So such type of event which flows from web browser to web-server are called as a client-side events. But if the server sent some updates or information to the browser, then such events are called server-sent events. Hence A server sent event occurs when the browser automatically updated from the Server.</p>
+    <p>The Server-sent events are mono-directional (always come from server to client). Or it may be called as one-way messaging.</p>
+    <hr>
+    <h2>Receiving events from the server</h2>
+    <p>The Server sent event uses the EventSource object to receive events from the server. It specifies the URI of the script which generates the events.</p>
+    <pre>
+          <strong>Example:</strong>
+          if(typeof(EventSource) !== "undefined") {  
+            var source = new EventSource("ServerUpdate.php");  
+           source.onmessage = function(event) {  
+             document.getElementById("output").innerHTML += event.data + "&lt;br&gt;";  
+           } 
+    </pre>   
+    <hr>
+    <ul>
+        <p>Code Explanation:</p>
+        <li>First, create the new EventSource object, and define the URI of the page which sends server updates. Here we have taken ServerUpdate.php for sending the updates to the web browser.</li>
+        <li>Each time when an update occurs from the server, then the onmessage event occurs and print the message on the web page.</li>
+        <li>The occurred message can be displayed on div using id "output".</li>
+    </ul>
+    <hr>
+    <h2>Check browser support for Server-sent Event</h2>
+    <p>First we need to check the browser support for server-sent event. So to check the browser support for Server-sent event we will check the EventSource object is true or not. If it is true then it will give alert for supporting else it will give alert for not supporting.</p>
+    <pre>
+        <strong>Example</strong>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>  
+        &lt;title>HTML5 SSE API&lt;/title>  
+        &lt;/head>  
+        &lt;body>  
+        &lt;div id="output">&lt;/div>  
+        &lt;script type="text/javascript">  
+             
+           if(typeof(EventSource)!=="undefined"){  
+               alert("Hey! Your browser is supporting.");  
+            }  
+           else{  
+            alert("Sorry! Your browser is not supporting.");   
+           }  
+        &lt;/script>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <hr>
+    <div id="output"></div>  
+    <script type="text/javascript">  
+     
+    if(typeof(EventSource)!=="undefined"){  
+       alert("Hey! Your browser is supporting.");  
+    }  
+    else{  
+    alert("Sorry! Your browser is not supporting.");   
+    }  
+    </script>  
+    <hr>
+    <h2>Sending events from the server:</h2>
+    <p>To work with server-sent, we need a server which can send data updates to the web browser. For this, we need to create a file in ASP, PHP or any dynamic language.</p>
+    <p>Following is the example to show the server updates:</p>
+    <pre>
+        ServerUpdate.php:
+    </pre>
+    <pre>
+        <strong>Example:</strong>
+        &lt;?php  
+        header('Content-Type: text/event-stream');  
+        header('Cache-Control: no-cache');  
+        /Get the current time of server  
+        $time = date('r');  
+        echo "data: The Current Server time is: {$time}\n\n";  
+        flush();  
+        ?>  
+    </pre>
+    <hr>
+    <ul>
+        <p>Code Explanation:</p>
+        <li>In the first line of the code, we have set the "Content-type" header to "text/event-stream". It is required for server-side event standard.</li>
+        <li>The second line informs the server to turn off the caching else the server updates may be cached.</li>
+        <li>echo "data: The Current Server time is: {$time}\n\n"; It creates the output of data to send, and it must always start with data: .</li>
+        <li>Then, we have used the flush () method, which makes sure that data is sent right away to the web page.</li>
+    </ul>
+    <hr>
+    <h2>Complete Example:</h2>
+    <strong>Example</strong>
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>  
+          &lt;style type="text/css">  
+            div{  
+              text-align: center;  
+              background-color: #98f5ff;  
+            }  
+          &lt;/style>  
+        &lt;/head>  
+        &lt;body>  
+  
+        &lt;h1 align="center">Dynamic Server Updates&lt;/h1>
+        &lt;div id="output">&lt;/div>  
+        &lt;script>  
+        if(typeof(EventSource) !== "undefined") {  
+          var source = new EventSource("ServerUpdate.php");  
+          source.onmessage = function(event) {  
+            document.getElementById("output").innerHTML += event.data + "<br>";  
+          }  
+        } else {  
+          alert("Sorry, your browser does not support the server sent updates");}  
+        &lt;/script>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <hr>
+    <h1 align="center">Dynamic Server Updates</h1>  
+    <div id="output"></div>  
+    <script>  
+    if(typeof(EventSource) !== "undefined") {  
+      var source = new EventSource("ServerUpdate.php");  
+      source.onmessage = function(event) {  
+        document.getElementById("output").innerHTML += event.data + "<br>";  
+      }  
+    } else {  
+      alert("Sorry, your browser does not support the server sent updates");}  
+    </script>  
+</body>
+</html>

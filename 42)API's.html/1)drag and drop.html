@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Drag and Drop</title>
+    <style>
+        #div1 {
+          width: 350px;
+          height: 300px;
+          padding: 20px;
+          border: 1px solid #aaaaaa;
+        }
+
+        #div11, #div21 {
+        float: left;
+        width: 350px;
+        height: 300px;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid black;
+        }
+    </style>
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Html Drag and Drop</h1>
+    <p>
+      HTML Drag and Drop (DnD) is a feature of HTML5. It is a powerful user
+      interface concept which is used to copy, reorder and delete items with the
+      help of mouse. You can hold the mouse button down over an element and drag
+      it to another location. If you want to drop the element there, just
+      release the mouse button.
+    </p>
+    <p></p>
+    <p>
+      If you want to achieve the Drag and Drop functionality in traditional
+      HTML4, you must either have to use complex JavaScript programming or other
+      JavaScript frameworks like jQuery etc
+    </p>
+    <hr />
+    <h2>Drag and Drop</h2>
+    <p>
+      Drag and drop is a very common feature. It is when you "grab" an object
+      and drag it to a different location.
+    </p>
+    <hr />
+    <h2>Events for Drag and Drop feature</h2>
+    <table border="10%">
+      <tr>
+        <th>Event</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Drag</td>
+        <td>
+          It fires every time when the mouse is moved while the object is being
+          dragged.
+        </td>
+      </tr>
+      <tr>
+        <td>Dragstart</td>
+        <td>
+          It is a very initial stage. It fires when the user starts dragging
+          object.
+        </td>
+      </tr>
+      <tr>
+        <td>Dragenter</td>
+        <td>
+          It fires when the user moves his/her mouse cursur over the target
+          element.
+        </td>
+      </tr>
+      <tr>
+        <td>Dragover</td>
+        <td>This event is fired when the mouse moves over an element.</td>
+      </tr>
+      <tr>
+        <td>Dragleave</td>
+        <td>This event is fired when the mouse leaves an element.</td>
+      </tr>
+      <tr>
+        <td>Drop</td>
+        <td>Drop It fires at the end of the drag operation.</td>
+      </tr>
+      <tr>
+        <td>Dragend</td>
+        <td>
+          It fires when user releases the mouse button to complete the drag
+          operation.
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <h2>HTML Drag and Drop Example</h2>
+    <p>The example below is a simple drag and drop example:</p>
+    <pre>
+        &lt;!DOCTYPE HTML>
+        &lt;html>
+        &lt;head>
+        &lt;script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        &lt;/script>
+        &lt;/head>
+        &lt;body>
+
+        &lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">&lt;/div>
+
+        &lt;img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+        &lt;/body>
+        &lt;/html>
+    </pre>
+    <hr />
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <img
+      id="drag1"
+      src="../MERNproject.html/laptop.avif"
+      draggable="true"
+      ondragstart="drag(event)"
+      width="336"
+      height="300"
+    />
+    <hr>
+    <p>It might seem complicated, but lets go through all the different parts of a drag and drop event.</p>
+    <hr>
+    <h2>Make an Element Draggable</h2>
+    <p>First of all: To make an element draggable, set the draggable attribute to true:</p>
+    <pre>
+        &lt;img draggable="true">
+    </pre>    
+    <hr>
+    <h2>What to Drag - ondragstart and setData()</h2>
+    <p>Then, specify what should happen when the element is dragged.</p>
+        
+    <p>In the example above, the ondragstart attribute calls a function, drag(event), that specifies what data to be dragged.</p>
+        
+    <p>The dataTransfer.setData() method sets the data type and the value of the dragged data:</p>
+    <pre>
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+    </pre>   
+    <p>Tn this case, the data type is "text" and the value is the id of the draggable element ("drag1").</p>
+    <hr>
+    <h2>Where to Drop - ondragover</h2>
+    <p>The ondragover event specifies where the dragged data can be dropped.</p>
+    <p>By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element.</p>
+    <p>This is done by calling the event.preventDefault() method for the ondragover event:</p>
+    <pre>
+        event.preventDefault()
+    </pre>    
+    <hr>
+    <h2>Do the Drop - ondrop</h2>
+    <p>When the dragged data is dropped, a drop event occurs.</p>
+    <p>In the example above, the ondrop attribute calls a function, drop(event):</p>
+    <pre>
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+          }
+    </pre> 
+    <hr>
+    <strong>Code Explained:</strong>  
+    <ul>
+        <li>Call preventDefault() to prevent the browser default handling of the data (default is open as link on drop)</li>
+        <li>Get the dragged data with the dataTransfer.getData() method. This method will return any data that was set to the same type in the setData() method</li>
+        <li>liThe dragged data is the id of the dragged element ("drag1")</li>
+        <li>liAppend the dragged element into the drop element</li>
+    </ul>
+    <hr><hr>
+    <!-- How to drag (and drop) an image back and forth between two <div> element:- -->
+        <p>How to drag (and drop) an image back and forth between two <div> element:-</p>
+    <pre>
+        &lt;!DOCTYPE HTML>
+        &lt;html>
+        &lt;head>
+        &lt;style>
+        #div1, #div2 {
+          float: left;
+          width: 100px;
+          height: 35px;
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid black;
+        }
+        &lt;/style>
+        &lt;script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        &lt;/script>
+        &lt;/head>
+        &lt;body>
+
+        &lt;h2>Drag and Drop&lt;/h2>
+        &lt;p>Drag the image back and forth between the two div elements.&lt;/p>
+
+        &lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        &lt; <img src="../MERNproject.html/laptop.avif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        &lt;/div>
+
+        &lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">&lt;/div>
+
+        &lt;/body>
+        &lt;/html>
+    </pre>
+    <hr>
+    
+    <div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="../MERNproject.html/laptop.avif" draggable="true" ondragstart="drag(event)" id="drag1" width="350" height="300">
+    </div>
+    <div id="div21" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</body>
+</html>

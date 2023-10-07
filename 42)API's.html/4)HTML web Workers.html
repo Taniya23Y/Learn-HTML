@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HtML Web Worker</title>
+    <style>  
+      .div1{  
+      margin-left: 350px;  
+      }  
+  </style>  
+  </head>
+  <body>
+    <h1>HTML Web Worker</h1>
+    <p>
+      The Web Workers are the separate JavaScript code which runs in the
+      background of the web page without affecting the user Interface.
+    </p>
+    <hr />
+    <h2>What is Web Worker?</h2>
+    <p>
+      Everyone wants a website or application which work fast and can execute
+      multiple operations simultaneously without affecting the performance of
+      the page. However, sometimes we experience some delay response or degraded
+      performance of page while executing some large operations. So this problem
+      can be solved using the Web Workers.
+    </p>
+    <p>
+      Web Workers are the multithreaded object which can execute multiple
+      JavaScript in parallel without affecting the performance of the
+      application or webpage.
+    </p>
+    <ul>
+      <p>Following are some key features of the Web Workers:</p>
+      <li>Web-workers are threaded JavaScript.</li>
+      <li>Web-workers are the kernel-level thread.</li>
+      <li>Web-workers requires more space and CPU time.</li>
+      <li>Web-workers enhances the speed of a website.</li>
+      <li>Web-worker executes codes on the client side (not server-side).</li>
+      <li>
+        Web worker threads communicate with each other using postMessage()
+        callback method
+      </li>
+    </ul>
+    <p>
+      <strong>Tips:</strong> Before working with HTML Web Workers you must have
+      knowledge of JavaScript as the Web Worker depends on JavaScript.
+    </p>
+    <hr />
+    <h2>Types of Web Workers:</h2>
+    <p>In HTML5 Web Workers are of two types:</p>
+    <dl>
+      <dt>Dedicated Web Workers:</dt>
+      <dt>
+        The dedicated worker can be accessed by only one script which has called
+        it. The dedicated worker thread end as its parent thread ends. Dedicated
+        workers are only used by one or single main thread.
+      </dt>
+      <dt>Shared Web Workers:</dt>
+      <dd>
+        It can be shared by multiple scripts and can communicate using the port.
+        Shared workers can be accessed by different windows, iframes or workers.
+      </dd>
+    </dl>
+    <p>
+      <strong>Note:</strong>In this section, we will use dedicated Web Workers.
+    </p>
+    <hr />
+    <h2>Web Workers Browser Support:</h2>
+    <p>
+      Before learning the web Workers first, we need to check about the browser
+      support. So following is the code which checks whether your browser is
+      supporting or not.
+    </p>
+    <strong>Example</strong>
+    <pre>
+        &lt;body>  
+            &lt;h2>Example to check the browser support of Web Workers&lt;/h2>  
+            &lt;div id="supported">&lt;/div>  
+            &lt;div id="unsupported">&lt;/div>  
+            &lt;button onclick="worker();">click me&lt;/button>  
+            &lt;script type="text/javascript">  
+               function worker()   
+               {  
+                if(typeof(Worker)!=="undefined"){  
+                 document.getElementById("supported").innerHTML="Supporting the browser";  
+                  }  
+                 else  
+                  {  
+                  document.getElementById("unsupported").innerHTML="Not supporting";}  
+               }  
+            &lt;/script>  
+        &lt;/body>
+    </pre>
+    <hr />
+    <h2>Example to check the browser support of Web Workers</h2>
+    <div id="supported"></div>
+    <div id="unsupported"></div>
+    <button onclick="worker();">click me</button>
+    <script type="text/javascript">
+      function worker() {
+        if (typeof Worker !== "undefined") {
+          document.getElementById("supported").innerHTML =
+            "Supporting the browser";
+        } else {
+          document.getElementById("unsupported").innerHTML = "Not supporting";
+        }
+      }
+    </script>
+    <hr />
+    <h2>Creation of Web worker file:</h2>
+    <p>
+      To create a Web Worker file we need to create an external JavaScript file.
+    </p>
+    <p>
+      Here we have created a web worker file for calculating the square of the
+      number. And saved it with the name "worker.js".
+    </p>
+    <p>Below is the code for worker.js file.</p>
+    <pre>
+            onmessage =function(event){  
+                var num= event.data;  
+                var sqr=num*num;  
+                var result="";  
+                for(var i=1;i&lt;=sqr; i++)  
+                {  
+                result= "Sqaure result is:"+ " "+i;  
+                }  
+                postMessage(result);  
+                }  
+        </pre
+    >
+    <hr />
+    <h2>Creating the Web Worker Object:</h2>
+    <p>
+      In above "worker.js" file, we have created the JS file for web Worker now
+      it needs to call on an HTML file. To create the web worker object, you
+      need to call the Worker() constructor.
+    </p>
+    <p>Following is the syntax to call and create the object of Web Worker:</p>
+    <pre>
+          var worker= new Worker('worker.js');  
+        </pre
+    >
+    <hr />
+    <h2>Sending messages between the Worker thread and main thread:</h2>
+    <p>
+      All the communication of Worker thread depends on the postMessage() method
+      and onmessage event handler.
+    </p>
+    <hr />
+    <h2>Terminating the Web Worker:</h2>
+    <p>
+      If you want to immediately terminate the currently running worker in the
+      main thread, then you can terminate it by calling the terminate() method
+      of Web Worker. Here is the syntax for web worker termination:
+    </p>
+    <pre>
+          worker.terminate();    
+        </pre
+    >
+    <p>
+      Web Worker can be terminate in worker thread also by calling the close()
+      method.
+    </p>
+    <hr />
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>  
+        &lt;style>  
+            .div1{  
+            margin-left: 350px;  
+            }  
+        &lt;/style>  
+        &lt;/head>  
+        &lt;body>  
+        <!-- Sqaure Output Result -->  
+        &lt;div class="div1">  
+          &lt;h2>Example of Web Worker&lt;/h2>  
+        &lt;label>Enter the number to find the square&lt;/label>  
+        &lt;br><input type="text" name="num" id="num">&lt;br>  
+        &lt;br><button id="submit">Submit&lt;/button>  
+        &lt;button id="other">Wait&lt;/button>  
+        &lt;div id="text"></div>  
+        &lt;/div>  
+        &lt;script type="text/javascript">  
+  
+        document.getElementById("other").onclick=function() {  
+          alert("Hey! Web Worker is working, and you can wait for the result.");  
+        }  
+  
+        //Web-worker Code.....  
+          var worker= new Worker("worker.js");  
+          worker.onmessage= function(event){  
+          document.getElementById("text").innerText= event.data;}  
+          document.getElementById("submit").onclick= function(){  
+          var num= document.getElementById("num").value;  
+          worker.postMessage(num);  
+         }  
+        &lt;/script>  
+        &lt;p>&lt;b>Note:Try to enter a big number, and then click on other button. The page will respond properly&lt;/b>&lt;/p>  
+        &lt;/body>  
+        &lt;/html>  
+       </pre>
+       <hr>
+       <!-- Sqaure Output Result -->  
+      <div class="div1">  
+        <h2>Example of Web Worker</h2>  
+      <label>Enter the number to find the square</label>  
+      <br><input type="text" name="num" id="num"><br>  
+      <br><button id="submit">Submit</button>  
+      <button id="other">Wait</button>  
+      <div id="text"></div>  
+      </div>  
+      <script type="text/javascript">  
+  
+      document.getElementById("other").onclick=function() {  
+        alert("Hey! Web Worker is working, and you can wait for the result.");  
+      }  
+  
+      //Web-worker Code.....  
+        var worker= new Worker("worker.js");  
+        worker.onmessage= function(event){  
+        document.getElementById("text").innerText= event.data;}  
+        document.getElementById("submit").onclick= function(){  
+        var num= document.getElementById("num").value;  
+        worker.postMessage(num);  
+       }  
+      </script>  
+      <p><b>Note:Try to enter a big number, and then click on other button. The page will respond properly</b></p>  
+      <hr>
+      <pre>
+        <h1>Worker.js</h1>
+        onmessage=function(event){  
+        var num= event.data;  
+        var sqr=num*num;  
+        var result="";  
+        for(var i=1;i&lt;=sqr; i++)  
+        {  
+        result= "Sqaure result is:"+ " "+i;  
+        }  
+        postMessage(result);  
+        }  
+      </pre>
+      <hr>
+      <h2>Example Explanation:</h2>
+      <p>In the above example in HTML file we have used</p>
+      <ul>
+        <li>var worker= new Worker("worker.js"); To create the web Worker object.</li>
+        <li>worker.onmessage= function(event): It is used to send the message between the main thread and Worker thread.</li>
+        <li>worker.postMessage(num); This is the method used to communicate between the Worker thread and main thread. Using this method Worker thread return the result to the main thread.</li>
+      </ul>
+  </body>
+</html>

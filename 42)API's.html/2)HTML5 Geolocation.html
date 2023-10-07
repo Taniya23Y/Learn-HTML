@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Geolocation</title>
+  </head>
+  <body>
+    <h1>HTML5 Geolocation</h1>
+    <p>
+      The Geolocation is one of the best HTML5 API which is used to identify the
+      user's geographic location for the web application.
+    </p>
+    <p>
+      This new feature of HTML5 allows you to navigate the latitude and
+      longitude coordinates of the current website's visitor. These coordinates
+      can be captured by JavaScript and send to the server which can show your
+      current location on the website
+    </p>
+    <p>
+      Most of the geolocation services use Network routing addresses such as IP
+      addresses, RFID, WIFI and MAC addresses or internal GPS devices to
+      identify the user's location.
+    </p>
+    <hr />
+    <strong>
+      To completely understand the concept of Geolocation API you must have some
+      knowledge of JavaScript.</strong
+    >
+    <hr />
+    <h2>User privacy:</h2>
+    <p>
+      The user's location is the privacy concern, so geolocation API protects
+      the user's privacy by taking the user's permission before getting the
+      location. Geolocation API sends a notification prompt box which user can
+      allow or deny, and if the user allows then only his location will be
+      identified.
+    </p>
+    <hr />
+    <p>
+      <strong>Note:</strong> Your browser must support the geolocation to use it
+      for the web application. Although most of the browsers and mobile devices
+      support the Geolocation API, and this API is only available for HTTPS
+      request.
+    </p>
+    <hr />
+    <h2>Geolocation object</h2>
+    <p>
+      The Geolocation API is work with the navigation.geolocation object. Its
+      read-only property returns a Geolocation object which identifies the
+      location of the user and can generate a customized result based on user
+      location.
+    </p>
+    <strong>Syntax:</strong>
+    <pre>
+            geo=navigator. geolocation;   
+    </pre>
+    <p>If this object is present, then you can get the geolocation services.</p>
+    <hr />
+    <h2>Geolocation Methods</h2>
+    <p>
+      The Geolocation API uses three methods of Geolocation interface which are
+      given following:
+    </p>
+    <table border="10%">
+      <p>Methods Description</p>
+      <th>Method</th>
+      <th>Description</th>
+      <tr>
+        <td>getCurrentPosition()</td>
+        <td>
+          It identifies the device or the user's current location and returns a
+          position object with data.
+        </td>
+      </tr>
+      <tr>
+        <td>watchPosition()</td>
+        <td>Return a value whenever the device location changes.</td>
+      </tr>
+      <tr>
+        <td>clearWatch()</td>
+        <td>It cancels the previous watchPosition() call</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>Checking for browser support:</h2>
+    <p>
+      The geolocation property of navigator.geolcation object helps to determine
+      the browser support for the Geolocation API.
+    </p>
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>  
+            &lt;title>Geolocation API&lt;/title>  
+        &lt;/head>  
+        &lt;body>  
+        &lt;h1>Find your Current location&lt;/h1>  
+        &lt;button onclick="getlocation()">Click me&lt;/button>  
+        &lt;div id="location">&lt;/div>  
+        &lt;script>  
+            var x= document.getElementById("location");  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+            function getlocation() {  
+                if(navigator.geolocation){  
+                    alert("your browser is supporting Geolocation API")  
+                }  
+                else  
+                {  
+                    alert("Sorry! your browser is not supporting")  
+                }  
+            }  
+        &lt;/script>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <hr />
+    <h1>Find your Current location</h1>
+    <button onclick="getlocation()">Click me</button>
+    <div id="location"></div>
+    <script>
+      var x = document.getElementById("location");
+
+      function getlocation() {
+        if (navigator.geolocation) {
+          alert("your browser is supporting Geolocation API");
+        } else {
+          alert("Sorry! your browser is not supporting");
+        }
+      }
+    </script>
+    <hr />
+    <h2>Getting the User's current position:</h2>
+    <p>
+      To get the user's current location, getCurrentPosition() method of the
+      navigator.geolocation object is used. This method accepts three
+      parameters:
+    </p>
+    <ul>
+      <li>
+        <strong>success:</strong>A success callback function to get the location
+        of the user
+      </li>
+      <li>
+        <strong>error:</strong>An error callback function which takes "Position
+        Error" object as input.
+      </li>
+      <li>
+        <strong>options:</strong>It defines various options for getting the
+        location.
+      </li>
+    </ul>
+    <p>
+      The below example will return the longitude and latitude of the visitor's
+      current location.
+    </p>
+    <strong> Example: </strong>
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>  
+        &lt;title>Geolocation API&lt;/title>  
+        &lt;/head>  
+        &lt;body>  
+        &lt;h1>Find your Current location&lt;/h1>  
+        &lt;button onclick="getlocation()">Click me&lt;/button>  
+        &lt;div id="location">&lt;/div>  
+        &lt;script>  
+        var x= document.getElementById("location");  
+        function getlocation() {  
+            if(navigator.geolocation){  
+                navigator.geolocation.getCurrentPosition(showPosition)  
+              }  
+            else  
+            {  
+                 alert("Sorry! your browser is not supporting")  
+             } }  
+           
+         function showPosition(position){  
+           var x = "Your current location is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " +    position.coords.longitude + ")";  
+                    document.getElementById("location").innerHTML = x;  
+         }  
+        &lt;/script>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <hr />
+    <h1>Find your Current location</h1>
+    <button onclick="getlocation()">Click me</button>
+    <div id="location"></div>
+    <script>
+      var x = document.getElementById("location");
+      function getlocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          alert("Sorry! your browser is not supporting");
+        }
+      }
+
+      function showPosition(position) {
+        var x =
+          "Your current location is (" +
+          "Latitude: " +
+          position.coords.latitude +
+          ", " +
+          "Longitude: " +
+          position.coords.longitude +
+          ")";
+        document.getElementById("location").innerHTML = x;
+      }
+    </script>
+    <hr />
+    <h2>Explanation:</h2>
+    <ul>
+      <li>First checking the browser support</li>
+      <li>Getting current position with getCurrentPosition()</li>
+      <li>
+        Getting latitude and longitude values with showPosition() method which
+        is call back method of getCurrentPosition().
+      </li>
+    </ul>
+    <hr />
+    <h2>Handling Errors and Rejections: Using an Error callback function</h2>
+    <p>
+      The second parameter of getCurrentPosition is an error Callback function.
+      It is an optional parameter and used to handle errors and user rejection
+      while getting the user's location.
+    </p>
+    <p>
+      Following are the possible options for invoking the error call back
+      function:
+    </p>
+    <ul>
+      <li>Unknown random error Occurred</li>
+      <li>If the user has denied for sharing location</li>
+      <li>Location information is not available</li>
+      <li>Request for location is timed-out.</li>
+    </ul>
+    <hr />
+    <strong>Example:</strong>
+    <pre>
+        function showError(error) {  
+            switch(error.code){  
+                case error.PERMISSION_DENIED:  
+                alert("User denied the request for Geolocation API.");  
+                break;  
+            case error.POSITION_UNAVAILABLE:  
+                alert("USer location information is unavailable.");  
+                break;  
+            case error.TIMEOUT:  
+                alert("The request to get user location timed out.");  
+                break;  
+            case error.UNKNOWN_ERROR:  
+                alert("An unknown error occurred.");  
+                break;  
+        }  
+    }  
+    </pre>
+    <hr />
+    <h1>Find your Current location</h1>
+    <button onclick="getlocation()">Click me</button>
+    <div id="location"></div>
+    <script>
+      var x = document.getElementById("location");
+      function getlocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          alert("Sorry! your browser is not supporting");
+        }
+      }
+
+      function showPosition(position) {
+        var x =
+          "Your current location is (" +
+          "Latitude: " +
+          position.coords.latitude +
+          ", " +
+          "Longitude: " +
+          position.coords.longitude +
+          ")";
+        document.getElementById("location").innerHTML = x;
+      }
+
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation API.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("USer location information is unavailable.");
+            break;
+          case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+          case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+        }
+      }
+    </script>
+    <hr />
+    <h2>Displaying location on Google Map</h2>
+    <p>
+      Till now, we have seen how to show your location using latitude and
+      longitude values, but it is not sufficient. Hence we can also show the
+      exact location on Google map with this API.
+    </p>
+    <p>Following example showing the location using Google Map.</p>
+    <strong>Example</strong>
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>  
+        &lt;title>Geolocation API&lt;/title>  
+        &lt;/head>  
+        &lt;body>  
+        &lt;h2>Find Your Location in below Map&lt;/h2>   
+        &lt;button onclick="getlocation();"> Show Position&lt;/button>   
+        &lt;div id="demo" style="width: 600px; height: 400px; margin-left: 200px;">&lt;/div>   
+         
+        &lt;script src="https://maps.google.com/maps/api/js?sensor=false"> &lt;/script>   
+          
+        &lt;script type="text/javascript">   
+        function getlocation(){   
+            if(navigator.geolocation){   
+                navigator.geolocation.getCurrentPosition(showPos, showErr);   
+            }  
+            else{  
+                alert("Sorry! your Browser does not support Geolocation API")  
+            }  
+        }   
+        //Showing Current Poistion on Google Map  
+        function showPos(position){   
+            latt = position.coords.latitude;   
+            long = position.coords.longitude;   
+            var lattlong = new google.maps.LatLng(latt, long);   
+            var myOptions = {   
+                center: lattlong,   
+                zoom: 15,   
+                mapTypeControl: true,   
+                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL}   
+            }   
+            var maps = new google.maps.Map(document.getElementById("demo"), myOptions);   
+            var markers =   
+            new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"});   
+        }   
+  
+        //Handling Error and Rejection  
+             function showErr(error) {  
+              switch(error.code){  
+              case error.PERMISSION_DENIED:  
+             alert("User denied the request for Geolocation API.");  
+              break;  
+             case error.POSITION_UNAVAILABLE:  
+             alert("USer location information is unavailable.");  
+            break;  
+            case error.TIMEOUT:  
+            alert("The request to get user location timed out.");  
+            break;  
+           case error.UNKNOWN_ERROR:  
+            alert("An unknown error occurred.");  
+            break;  
+           }  
+        }       
+        &lt;/script>     
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <hr />
+    <h2>Find Your Location in below Map</h2>
+    <button onclick="getlocation();">Show Position</button>
+    <div
+      id="demo"
+      style="width: 600px; height: 400px; margin-left: 200px"
+    ></div>
+
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <script type="text/javascript">
+      function getlocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPos, showErr);
+        } else {
+          alert("Sorry! your Browser does not support Geolocation API");
+        }
+      }
+      //Showing Current Poistion on Google Map
+      function showPos(position) {
+        latt = position.coords.latitude;
+        long = position.coords.longitude;
+        var lattlong = new google.maps.LatLng(latt, long);
+        var myOptions = {
+          center: lattlong,
+          zoom: 15,
+          mapTypeControl: true,
+          navigationControlOptions: {
+            style: google.maps.NavigationControlStyle.SMALL,
+          },
+        };
+        var maps = new google.maps.Map(
+          document.getElementById("demo"),
+          myOptions
+        );
+        var markers = new google.maps.Marker({
+          position: lattlong,
+          map: maps,
+          title: "You are here!",
+        });
+      }
+
+      //Handling Error and Rejection
+      function showErr(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation API.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("USer location information is unavailable.");
+            break;
+          case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+          case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+        }
+      }
+    </script>
+    <hr />
+    <h2>Location properties</h2>
+    <p>
+      The getCurrentPosition() method of Geolocation API returns callback
+      methods which retrieve the user location information. This callback method
+      returns a Position Object which contains all location information and
+      specifies different properties. It always returns latitude and longitude
+      properties, but the following table describes some other properties of
+      Position object.
+    </p>
+    <table border="20%">
+      <tr>
+        <th>Properties</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>coords.latitude</td>
+        <td>It returns latitude of user location as a decimal number.</td>
+      </tr>
+      <tr>
+        <td>coords.longitude</td>
+        <td>It returns longitude of user location as a decimal number.</td>
+      </tr>
+      <tr>
+        <td>coords.altitude</td>
+        <td>
+          It returns altitude in meters above the sea level (Only if available).
+        </td>
+      </tr>
+      <tr>
+        <td>coords.accuracy</td>
+        <td>It returns the accuracy of the user's position.</td>
+      </tr>
+      <tr>
+        <td>coords.altitudeAccuracy</td>
+        <td>
+          It returns the altitude accuracy of user location. (If available)
+        </td>
+      </tr>
+      <tr>
+        <td>coords.heading</td>
+        <td>
+          t returns headings as degree clockwise from North. (If available)
+        </td>
+      </tr>
+      <tr>
+        <td>coords.speed</td>
+        <td>It returns the speed in meter per seconds. (If available).</td>
+      </tr>
+      <tr>
+        <td>timestamp</td>
+        <td>It returns data or time of response. (If available).</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>Watching the current location:</h2>
+    <p>
+      If we want to know the user location while he is moving and want accurate
+      location at every changed position, then it can be achieved by using
+      watchPosition() callback function.
+    </p>
+    <p>
+      This function has all three parameters which getCurrentPosition()
+      contains.
+    </p>
+    <strong>Syntax:</strong>
+    <pre>
+        var id = navigator.geolocation.watchPosition(success[, error[, options]])  
+    </pre>
+    <p>
+      The watchPosition() method returns an ID that can be used to uniquely
+      identifying the user?s position, and this ID can also be used with
+      clearWatch() method to stop watching the location.
+    </p>
+  </body>
+</html>

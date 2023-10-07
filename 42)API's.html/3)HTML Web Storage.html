@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Web Storage</title>
+    <style>  
+        body{  
+          color: green;  
+          text-align: center;  
+          font-size: 30px;  
+          margin-top: 30px;  
+          font-style: italic;  
+        }  
+      </style>  
+  </head>
+  <body>
+    <h1>HTML Web Storage</h1>
+    <p>
+      The Web Storage is one of the great features of HTML5. With the Web
+      Storage feature, web applications can locally store data within the
+      browser on the client side. It stores data in the form of key/value pair
+      on the browser. Web Storage sometimes also known as DOM storage.
+    </p>
+    <p>
+      Storing data with the help of web storage is similar to cookies, but it is
+      better and faster than cookies storage.
+    </p>
+    <p>In compared to cookies Web Storage has Following Advantages:</p>
+    <ul>
+      <li>
+        Web Storage can use storage space upto 5MB per domain. (The browser
+        software may prompt the user if the space limit is reached).
+      </li>
+      <li>
+        It will not send data to the server side, hence it is faster than
+        cookies storage.
+      </li>
+      <li>
+        The data stored by local Storage never expires, but cookies data expires
+        after some time or session.
+      </li>
+      <li>Web Storage is more secure than cookies.</li>
+    </ul>
+    <hr />
+    <h2>Types of Web Storage</h2>
+    <p>There are two types of web storage with different scope and lifetime.</p>
+    <ul>
+      <li>
+        <b>Local Storage:</b> Local Storages uses Windows.localStaorage object
+        which stores data and available for every page. But data persist even if
+        the browser is closed and reopened (Stores data with no Expiration).
+      </li>
+      <li>
+        <b>Session Storage:</b> Session Storage uses Windows.sessionStorage
+        object which stores data for one session and data will be lost if the
+        window or browser tab will be closed.
+      </li>
+    </ul>
+    <hr />
+    <p>
+      <strong>Note:</strong> For both storage type, web storage data will not be
+      available for different browsers, and Storage size may vary from browser
+      to browser.
+    </p>
+    <hr />
+    <h2>Browser support for Web Storage</h2>
+    <p>
+      Before learning for web Storage we must check whether our browser is
+      supporting the web Storage or not. So you can check by executing the
+      following code:
+    </p>
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>  
+            &lt;title>Geolocation API&lt;/title>  
+        &lt;/head>  
+        &lt;body>  
+        &lt;div id="result">&lt;/div>  
+        &lt;script>  
+        if(typeof(Storage)!=="undefined") {  
+            document.getElementById("result").innerHTML = "Hey, Your browser supports the Web Storage.";  
+           }  
+           else{  
+         document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage";  
+           }  
+        &lt;/script>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <hr />
+    <div id="result"></div>  
+    <script>  
+     if(typeof(Storage)!=="undefined") {  
+     document.getElementById("result").innerHTML = "Hey, Your browser supports the Web Storage.";  
+     }  
+     else{  
+     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage";  
+     }  
+    </script>  
+     <hr>
+    <h2>The localStorage Object</h2>
+    <p>
+      The localStorage object stores data locally within the browser. The data
+      stored by localStroage object does not have any expiration date. Hence the
+      stored data will not be deleted if the browser is closed or reopened.
+    </p>
+    <p>
+      Each piece of data is stored in simple key-value pairs. The key/values are
+      always stored as String, and can be accessed with localStorage.getItem()
+      and localStorage.setItem() methods.
+    </p>
+    <strong>Example</strong>
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>  
+          &lt;title>Web Storage API</title>  
+          &lt;style>  
+            body{  
+              color: green;  
+              text-align: center;  
+              font-size: 30px;  
+              margin-top: 30px;  
+              font-style: italic;  
+            }  
+          &lt;/style>  
+        &lt;/head>  
+        &lt;body>  
+        &lt;script>  
+         if(typeof(Storage)!=="undefined") {  
+          localStorage.setItem("name","Harshita");  
+          localStorage.setItem("Country", "India");  
+           document.write("Hi"+" "+localStorage.name+" "+"from" +" "+ localStorage.Country);  
+        }  
+         else{  
+          alert("Sorry! your browser is not supporting the browser")  
+         }  
+        &lt;/script>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <hr>
+    <script>  
+        if(typeof(Storage)!=="undefined") {  
+         localStorage.setItem("name","Harshita");  
+         localStorage.setItem("Country", "India");  
+          document.write("Hi"+" "+localStorage.name+" "+"from" +" "+ localStorage.Country);  
+       }  
+        else{  
+         alert("Sorry! your browser is not supporting the browser")  
+        }  
+       </script>  
+    <hr>
+    <h2>Example Explanation:</h2>
+    <p>In the above example, we have used typeof(Storage)!=="undefined" to check browser support.</p>
+    <p>localStorage.setItem("name","Harshita") is used to set the key and value data where "name" is key and "Harshita" is value.</p>
+    <p>The localStorage.name is used to retrieve the values using key. You can also use another method:</p>
+    <p>localStorage.getItem to retrieve the value.</p>
+    <hr>
+    <p><strong>Note: </strong>You can check the local storage items in the form of key/value pair by inspecting elements on the web page and then go to the Application option where you will find the local storage and Session storage and can check stored items in the list.</p>
+    <hr>
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;head>   
+        &lt;style>  
+        div{  
+        background-color: pink;  
+        height: 50px;  
+        }  
+        &lt;/style>  
+        &lt;/head>  
+        &lt;body>  
+        &lt;h2>Example of counter Using Local Storage&lt;/h2>  
+        &lt;button onclick="counter();">click me&lt;/button>  
+        &lt;div id="output">See the result here :&lt;/div>  
+        &lt;script type="text/javascript">  
+          function counter() {  
+           if(localStorage.hits){  
+          localStorage.hits=Number(localStorage.hits)+1;  
+           }  
+           else{  
+           localStorage.hits=1;  
+           }  
+           document.getElementById('output').innerHTML= "You have clicked counter button for"+ " "+ localStorage.hits +" "+"times";  
+        }  
+        &lt;/script>  
+        &lt;p>click the counter button to see the total counts. &lt;/p>  
+        &lt;p>If you will close the browser still it will not reset. &lt;/p>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <hr>
+    
+  </body>
+</html>
