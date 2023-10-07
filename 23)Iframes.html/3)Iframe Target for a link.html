@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframe Target for a link</title>
+  </head>
+  <body>
+    <fieldset>
+      <section>
+        <h1>Iframe Target for a link</h1>
+        <p>
+          You can set a target frame for a link by using iframe. Your specified
+          target attribute of the link must refer to the name attribute of the
+          iframe.
+        </p>
+        <strong>Example:</strong>
+        <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;body&gt;
+                &lt;h2&gt;Remove the Iframe Border&lt;/h2&gt;    
+                &lt;p>This iframe example doesn't have any border&lt;/p&gt;    
+                &lt;iframe height="300px" width="100%" src="new.html" name="iframe_a"&gt;&lt;/iframe&gt; 
+                &lt;p&gt;&lt;a href="https://www.javatpoint.com" target="iframe_a"&gt;JavaTpoint.com&lt;/a&gt;&lt;/p&gt;  
+                &lt;p&gt;The name of iframe and link target must have same value else link will not open as a frame. &lt;/p&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+      </section>
+    </fieldset>
+    <br />
+    <h2>Iframe - Target for a Link</h2>
+    <iframe height="300px" width="100%" src="new.html" name="iframe_a"></iframe>
+    <p>
+      <a href="https://www.javatpoint.com" target="iframe_a">JavaTpoint.com</a>
+    </p>
+    <p>
+      The name of iframe and link target must have same value else link will not
+      open as a frame.
+    </p>
+  </body>
+</html>
