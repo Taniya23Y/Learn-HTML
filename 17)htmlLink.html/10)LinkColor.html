@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Color</title>
+    <style>
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+        <h1>HTML Links - Different Colors</h1>
+      <ul>
+        <li>
+          <p>
+            An HTML link is displayed in a different color depending on whether
+            it has been visited, is unvisited, or is active.
+          </p>
+        </li>
+      </ul>
+      <h2>HTML Link Colors</h2>
+      <ul>
+        <p>By default, a link will appear like this (in all browsers):</p>
+        <li>An unvisited link is underlined and blue</li>
+        <li>A visited link is underlined and purple</li>
+        <li>An active link is underlined and red</li>
+      </ul>
+      <p>You can change the link state colors, by using CSS:</p>
+      <strong>Example:</strong>
+      <pre>
+        &lt;style&gt;
+            a:link {
+              color: green;
+              background-color: transparent;
+              text-decoration: none;
+            }
+            
+            a:visited {
+              color: pink;
+              background-color: transparent;
+              text-decoration: none;
+            }
+            
+            a:hover {
+              color: red;
+              background-color: transparent;
+              text-decoration: underline;
+            }
+            
+            a:active {
+              color: yellow;
+              background-color: transparent;
+              text-decoration: underline;
+            }
+            &lt;/style&gt;
+      </pre>
+    </fieldset>
+    <h2>Link Colors</h2>
+    <p>You can change the default colors of links.</p>
+    <a href="lamp.jpg">Html Images</a>
+  </body>
+</html>
