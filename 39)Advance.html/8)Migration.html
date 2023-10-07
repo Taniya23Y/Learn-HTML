@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Migration</title>
+  </head>
+  <body>
+    <h1>HTML5 Migration</h1>
+    <p>
+      HTML5 migration specifies that how to migrate from HTML4 to HTML5. Let?s
+      see how to convert HTML4 page into HTML5 page without any problem in
+      content or structure.
+    </p>
+    <table border="1px;">
+        <tr>
+            <th>In HTML4</th>
+            <th>In HTML5</th>
+        </tr>
+        <tr><th>&lt;div id="header"></th><th>&lt;header></th>
+        <tr><th>&lt;div id="menu"></th><th>&lt;nav></th>
+        <tr><th>&lt;div id="content"></th><th>&lt;section></th>
+        <tr><th>&lt;div class="article"></th><th>&lt;article></th>
+        <tr><th>&lt;div id="footer"></th><th>&lt;footer></th>
+    </table>
+    <h2>Let's see a typical HTML4 page.</h2>
+    <strong>Example:</strong>
+    <pre>
+        &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+        &lt;html lang="en">  
+        &lt;head>  
+        &lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8">  
+        &lt;title>HTML4&lt;/title>  
+        &lt;style>  
+        body {  
+            font-family: Verdana,sans-serif;  
+            font-size: 0.9em;  
+        }  
+  
+        div#header, div#footer {  
+            padding: 10px;  
+            color: white;  
+            background-color: black;  
+        }  
+  
+        div#content {  
+            margin: 5px;  
+            padding: 10px;  
+            background-color: lightgrey;  
+        }  
+  
+        div.article {  
+            margin: 5px;  
+            padding: 10px;  
+            background-color: white;  
+        }  
+  
+        div#menu ul {  
+            padding: 0;  
+        }  
+  
+        div#menu ul li {  
+            display: inline;  
+            margin: 5px;  
+        }  
+        &lt;/style>  
+        &lt;/head>  
+        &lt;body>  
+  
+        &lt;div id="header">  
+        &lt;h1>JavaTpoint Times&lt;/h1>  
+        &lt;/div>  
+  
+        &lt;div id="menu">  
+        &lt;ul>  
+        &lt;li>Tutorials&lt;/li>  
+        &lt;li>Technology&lt;/li>  
+        &lt;li>Blog</li>  
+        &lt;/ul>  
+        &lt;/div>  
+  
+        &lt;div id="content">  
+        &lt;h2>Tutorials Section&lt;/h2>  
+        &lt;div class="article">  
+        &lt;h2>Tutorial1&lt;/h2>  
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem.   
+        Morbi condimentum est nibh, et consectetur tortor feugiat at.&lt;/p>  
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem.   
+        Morbi condimentum est nibh, et consectetur tortor feugiat at.&lt;/p>  
+        &lt;/div>  
+        &lt;div class="article">  
+        &lt;h2>Tutorial2&lt;/h2>  
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem.   
+        Morbi condimentum est nibh, et consectetur tortor feugiat at.&lt;/p>  
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem.   
+        Morbi condimentum est nibh, et consectetur tortor feugiat at.&lt;/p>  
+        &lt;/div>  
+        &lt;/div>  
+  
+        &lt;div id="footer">  
+        &lt;p>© 2018 JavaTpoint Times. All rights reserved.&lt;/p>  
+        &lt;/div>  
+  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+
+    <h2>Change HTML4 Doctype to HTML5 Doctype</h2>
+    <h3>HTML4 Doctype Syntax:</h3>
+    <pre>
+        &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+    </pre>
+    <h3>HTML5 Doctype Syntax:</h3>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+    </pre>
+    <h3>Example:</h3>
+    <pre>
+     &lt;!DOCTYPE html>  
+     &lt;html lang="en">  
+     &lt;head>  
+     &lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8">  
+     &lt;title>HTML5&lt;/title>  
+     &lt;style>  
+     body {  
+         font-family: Verdana,sans-serif;  
+         font-size: 0.9em;  
+     }  
+     div#header, div#footer {  
+         padding: 10px;  
+         color: white;  
+         background-color: black;  
+     }  
+  
+     div#content {  
+         margin: 5px;  
+         padding: 10px;  
+         background-color: lightgrey;  
+     }  
+     div.article {  
+         margin: 5px;  
+         padding: 10px;  
+         background-color: white;  
+     }  
+     div#menu ul {  
+         padding: 0;  
+     }  
+     div#menu ul li {  
+         display: inline;  
+         margin: 5px;  
+     }  
+     &lt;/style>  
+     &lt;/head>  
+     &lt;body>  
+     &lt;div id="header">  
+     &lt;h1>JavaTpoint Times&lt;/h1>  
+     &lt;/div>  
+  
+     &lt;div id="menu">  
+     &lt;ul>  
+     &lt;li>Tutorials&lt;/li>  
+     &lt;li>Technology&lt;/li>  
+     &lt;li>Blog&lt;/li>  
+     &lt;/ul>  
+     &lt;/div>  
+     &lt;div id="content">  
+     &lt;h2>Tutorials Section&lt;/h2>  
+     &lt;div class="article">  
+     &lt;h2>Tutorial1&lt;/h2>  
+     &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem.   
+     Morbi condimentum est nibh, et consectetur tortor feugiat at.&lt;/p>  
+     &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem.   
+     Morbi condimentum est nibh, et consectetur tortor feugiat at.&lt;/p>  
+     &lt;/div>  
+     &lt;div class="article">  
+     &lt;h2>Tutorial2&lt;/h2>  
+     &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem.   
+     Morbi condimentum est nibh, et consectetur tortor feugiat at.&lt;/p>  
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem.   
+     Morbi condimentum est nibh, et consectetur tortor feugiat at.&lt;/p>  
+     &lt;/div>  
+     &lt;/div>  
+     &lt;div id="footer">  
+     &lt;p>© 2018 JavaTpoint Times. All rights reserved.&lt;/p>  
+     &lt;/div>  
+  
+     &lt;/body>  
+     &lt;/html>  
+    </pre>
+  </body>
+</html>

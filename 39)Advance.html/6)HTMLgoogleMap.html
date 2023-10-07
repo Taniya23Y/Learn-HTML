@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Google Map</title>
+  </head>
+  <body>
+    <h1>HTML Google Map</h1>
+    <p>
+      HTML Google Map is used to display maps on your webpage. You can simply
+      add a map on your basic HTML page.
+    </p>
+    <pre>
+        <strong>Example:</strong>
+            &lt;!DOCTYPE html>  
+            &lt;html>  
+            &lt;body>  
+            &lt;h1>First Google Map Example&lt;/h1>  
+            &lt;div id="map">My map will go here...&lt;/div>  
+            &lt;/body>  
+            &lt;/html>  
+    </pre>
+    <hr />
+    <h2>Set the Map Size</h2>
+    <p>You can set the map size by using the following syntax:</p>
+    <pre>
+        &lt;div id="map" style="width:400px;height:400px;background:grey">&lt;/div>
+    </pre>
+    <h2>How to create a function to set the map properties?</h2>
+    <p>
+      You can set the map properties by creating a function. Here, the function
+      is myMap(). This example shows the Google map centered in London, England.
+    </p>
+    <p>
+      We have to use the functionalities of Google Maps API provided by a
+      JavaScript library located at Google. Use the following script to refer to
+      the Google Maps API with a callback to the myMap function.
+    </p>
+    <pre>
+        &lt;script src="https://maps.googleapis.com/maps/api/js?callback=myMap">&lt;/script>
+    </pre>
+    <pre>
+        <strong>Example:</strong>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;body>  
+        &lt;h1>My First Google Map&lt;/h1>  
+        &lt;div id="map" style="width:400px;height:400px;background:grey">&lt;/div>  
+        &lt;script>  
+        function myMap() {  
+        var mapOptions = {  
+            center: new google.maps.LatLng(51.5, -0.12),  
+            zoom: 10,  
+            mapTypeId: google.maps.MapTypeId.HYBRID  
+        }  
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);  
+        }  
+        &lt;/script>  
+        &lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap">&lt;/script>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <h2>Example Explanation</h2>
+    <ul>
+      <li>
+        <strong>mapOptions:</strong>It is a variable which defines the
+        properties for the map.
+      </li>
+      <li>
+        <strong>center:</strong> It specifies where to center the map (using
+        latitude and longitude coordinates).
+      </li>
+
+      <li>
+        <strong>zoom:</strong> It specifies the zoom level for the map (try to
+        experiment with the zoom level).
+      </li>
+
+      <li>
+        <strong>mapTypeId:</strong> It specifies the map type to display. The
+        following map types are supported: ROADMAP, SATELLITE, HYBRID, and
+        TERRAIN.
+      </li>
+
+      <li>
+        <strong
+          >var map=new google.maps.Map(document.getElementById("map"),
+          mapOptions):</strong
+        >
+        It creates a new map inside the element with id="map", using the
+        parameters that are passed (mapOptions).
+      </li>
+    </ul>
+    <h2>HTML Multiple Maps</h2>
+    <p>You can use different map types in a single example.</p>
+    <strong>Example:</strong>
+    <pre>
+        &lt;!DOCTYPE html>  
+        &lt;html>  
+        &lt;body>  
+        &lt;div id="googleMap1" style="width:400px;height:300px;">&lt;/div>  
+        &lt;br>  
+        &lt;div id="googleMap2" style="width:400px;height:300px;">&lt;/div>  
+        &lt;br>  
+        &lt;div id="googleMap3" style="width:400px;height:300px;">&lt;/div>  
+        &lt;br>  
+        &lt;div id="googleMap4" style="width:400px;height:300px;">&lt;/div>  
+        &lt;script>  
+        function myMap() {  
+          var mapOptions1 = {  
+            center: new google.maps.LatLng(51.508742,-0.120850),  
+            zoom:9,  
+            mapTypeId: google.maps.MapTypeId.ROADMAP  
+          };  
+          var mapOptions2 = {  
+            center: new google.maps.LatLng(51.508742,-0.120850),  
+            zoom:9,  
+            mapTypeId: google.maps.MapTypeId.SATELLITE  
+          };  
+          var mapOptions3 = {  
+            center: new google.maps.LatLng(51.508742,-0.120850),  
+            zoom:9,  
+            mapTypeId: google.maps.MapTypeId.HYBRID  
+          };  
+          var mapOptions4 = {  
+            center: new google.maps.LatLng(51.508742,-0.120850),  
+            zoom:9,  
+            mapTypeId: google.maps.MapTypeId.TERRAIN  
+          };  
+          var map1 = new google.maps.Map(document.getElementById("googleMap1"),mapOptions1);  
+          var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapOptions2);  
+          var map3 = new google.maps.Map(document.getElementById("googleMap3"),mapOptions3);  
+          var map4 = new google.maps.Map(document.getElementById("googleMap4"),mapOptions4);  
+        }  
+        &lt;/script>  
+        &lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap">&lt;/script>  
+        &lt;/body>  
+        &lt;/html>  
+    </pre>
+    <div id="googleMap1" style="width:400px;height:300px;"></div>  
+    <br>  
+    <div id="googleMap2" style="width:400px;height:300px;"></div>  
+    <br>  
+    <div id="googleMap3" style="width:400px;height:300px;"></div>  
+    <br>  
+    <div id="googleMap4" style="width:400px;height:300px;"></div>  
+    <script>  
+    function myMap() {  
+        var mapOptions1 = {  
+        center: new google.maps.LatLng(51.508742,-0.120850),  
+        zoom:9,  
+        mapTypeId: google.maps.MapTypeId.ROADMAP  
+        };  
+        var mapOptions2 = {  
+        center: new google.maps.LatLng(51.508742,-0.120850),  
+        zoom:9,  
+        mapTypeId: google.maps.MapTypeId.SATELLITE  
+        };  
+        var mapOptions3 = {  
+        center: new google.maps.LatLng(51.508742,-0.120850),  
+        zoom:9,  
+        mapTypeId: google.maps.MapTypeId.HYBRID  
+        };  
+        var mapOptions4 = {  
+        center: new google.maps.LatLng(51.508742,-0.120850),  
+        zoom:9,  
+        mapTypeId: google.maps.MapTypeId.TERRAIN  
+        };  
+        var map1 = new google.maps.Map(document.getElementById("googleMap1"),mapOptions1);  
+        var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapOptions2);  
+        var map3 = new google.maps.Map(document.getElementById("googleMap3"),mapOptions3);  
+        var map4 = new google.maps.Map(document.getElementById("googleMap4"),mapOptions4);  
+    }  
+        </script>  
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script> 
+  </body>
+</html>
