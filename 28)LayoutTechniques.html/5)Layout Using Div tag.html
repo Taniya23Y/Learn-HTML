@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout using div</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+
+      .header {
+        padding: 10px;
+        text-align: center;
+        background-color: #455e64;
+      }
+
+      .header h2 {
+        color: white;
+      }
+
+      /*===============[Nav CSS]==========*/
+
+      .nav {
+        background-color: #243238;
+        padding: 5px;
+      }
+
+      .nav li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px;
+      }
+
+      .nav a {
+        color: #fff;
+      }
+
+      .nav ul li a:hover {
+        text-decoration: none;
+        color: #7fffd4;
+      }
+
+      .lside {
+        float: left;
+        width: 80%;
+        min-height: 440px;
+        background-color: #f0f8ff;
+        text-align: center;
+      }
+
+      .rside {
+        text-align: center;
+        float: right;
+        width: 20%;
+        min-height: 440px;
+        background-color: #c1cdcd;
+      }
+
+      .footer {
+        height: 44px;
+        background-color: #455e64;
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      .footer p {
+        color: #8fbc8f;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <h2>javaTpoint Div Layout</h2>
+      </div>
+      <!-- Nav -->
+      <div class="nav">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">MENU</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li style="float: right"><a href="#">LOGIN</a></li>
+          <li style="float: right"><a href="#">SIGN-UP</a></li>
+        </ul>
+      </div>
+
+      <!-- main -->
+      <div style="height: 440px">
+        <div class="lside">
+          <p>Write your content here</p>
+        </div>
+        <!-- side -->
+        <div class="rside">
+          <p>This is side</p>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="footer">
+        <p>©<strong>Copyright javaTpoint.com</strong></p>
+      </div>
+    </div>
+  </body>
+</html>

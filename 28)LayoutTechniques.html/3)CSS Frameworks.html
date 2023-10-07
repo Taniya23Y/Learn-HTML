@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div.container {
+            width: 100%;
+            border: 1px solid gray;
+        }
+        header, footer {
+            background-color: #000080;
+            text-align: center;
+            padding: 1em;
+            clear: left;
+            color: white;
+        }
+        nav {
+            float: left;
+            margin: 0;
+            padding: 1em;
+            max-width: 160px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul a {
+            text-decoration: none;
+        }
+
+        article {
+            margin-left: 170px;
+            border-left: 1px solid gray;
+            padding: 1em;
+            overflow: hidden;
+        }
+    </style>
+  </head>
+  <body>
+   <fieldset>
+    <h1>CSS Frameworks</h1>
+    <p>
+      CSS provides many frameworks like W3.CSS, Bootstrap, and many more, to
+      create your layout fast. Using CSS frameworks you can easily create a
+      responsive and attractive web layout. You just need to add a link for
+      these frameworks, and you can use all properties available in the
+      framework.
+    </p>
+    <h3>CSS Float</h3>
+    <p>You can create an entire web layout using CSS float property.</p>
+    <p><strong>Advantage:</strong>It is very easy to learn and use. You just learn how the float and clear properties work.</p>
+    <p><strong>Disadvantage:</strong>Floating elements are tied to the document flow, which may harm the flexibility.</p>
+   </fieldset>
+   <div class="container">
+    <!-- header section  -->
+    <header>
+        <h1>Tutorial Gallery</h1>
+    </header>
+
+    <!-- navigation section  -->
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+        </ul>
+    </nav>
+
+    <!-- article section  -->
+    <article>
+        <h1>HTML</h1>
+        <p>HTML tutorial or HTML 5 tutorial provides basic and advanced concepts of html. Our HTML tutorial is   
+        developed for beginners and professionals.</p>  
+        <p>HTML is an acronym which stands for Hyper Text Markup Language. Let's see what is Hyper Text and what is Markup Language?</p>
+    </article>
+
+    <!-- footer section  -->
+    <footer>
+        Copyright © TutorialLearn.com
+    </footer>
+    
+   </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Layout</title>
+    <style>
+      li {
+        display: inline-block;
+        padding: 10px;
+      }
+
+      a {
+        color: #20b2aa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Tables (Not Recommended)</h1>
+    <p>
+      HTML table-based layout is one of the easiest ways for creating a layout,
+      as table use only rows and column-based format, but HTML tables are not
+      recommended for your page layout. The element is designed to display
+      tabular data. It is not good for a layout. Although first creating a
+      layout is easy, but if you want to change or redesign your website, then
+      it will be a complicated task.
+    </p>
+    <p>
+      Following is an example for the creation of a simple web page layout using
+      HTML table.
+    </p>
+    <table width="100%" style="border-collapse: collapse">
+      <tr>
+        <td colspan="2" style="background-color: #1a1a1a; text-align: center">
+          <h3 style="font-size: 30px; color: #ff6a6a">
+            Table-layout
+          </h3>
+        </td>
+      </tr>
+      <!-- nav section  -->
+      <tr>
+        <td colspan="2" style="background-color: #666666">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About-us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </td>
+      </tr>
+
+      <!-- main section  -->
+      <tr>
+        <td
+          style="
+            background-color: #e6e6fa;
+            width: 80%;
+            height: 400px;
+            text-align: center;
+          "
+        >
+          <p>Write your content Here</p>
+        </td>
+        <td style="background-color: #a7e6fb; height: 400px">
+          <p>This is your side bar</p>
+        </td>
+      </tr>
+
+      <!-- footer Section  -->
+      <tr>
+        <td colspan="2" style="background-color: #2e2e2e; text-align: center">
+          <p style="color: #f08080">
+            ©<strong>Copyright javaTpoint.com</strong>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <strong>Note:</strong>This example is just for show you how to create
+      layout using table but it's not recommended to use table layout.
+    </p>
+  </body>
+</html>
