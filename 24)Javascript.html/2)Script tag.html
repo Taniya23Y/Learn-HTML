@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script tag</title>
+  </head>
+  <body>
+    <fieldset>
+      <h1>HTML &lt;script&gt; Tag</h1>
+      <p>
+        The HTML &lt;script&gt; tag is used to specify a client-side script. It
+        may be an internal or external JavaScript which contains scripting
+        statements, hence we can place &lt;script&gt; tag within &lt;body&gt; or
+        &lt;head&gt; section.
+      </p>
+      <p>
+        It is mainly used to manipulate images, form validation and change
+        content dynamically. JavaScript uses document.getElementById() method to
+        select an HTML element.
+      </p>
+    </fieldset>
+    <h2>Use Javascript to change Text.</h2>
+    <button type="button" onclick="myFunction()">Click me!</button>
+    <p id="demo">This is a demonstration</p>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+      }
+    </script>
+  </body>
+</html>
