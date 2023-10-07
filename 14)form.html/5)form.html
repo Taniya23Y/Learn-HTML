@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="/Action.try.it.agian" method="get">
+        <fieldset>
+            <legend>User Personal Information</legend>
+        <!-- full name -->
+        <label for="name">Enter your Full Name</label><br/>
+        <input type="text" id="name" name="name" value="" /> <br/><br>
+        <!-- email  -->
+        <label for="emial">Enter your Email</label><br>
+        <input type="email" id="email" name="email" value="" /> <br/><br>
+        <!-- password -->
+        <label for=" password">Enter Your Password</label><br>
+        <input type="password" id="password" name="password" value=""/> <br><br>
+        <!-- confirm password -->
+        <label for="confirm">Confirm Password</label><br>
+        <input type="password" id="password" name="password" value=""/><br><br>
+        <!-- gender -->
+        <label for="gender">Enter Your Gender</label><br>
+        <input type="radio" id="gender" name="gender" value="Male" >Male <br>
+        <input type="radio" id="gender" name="gender" value="Female" >Female <br>
+        <input type="radio" id="gender" name="gender" value="Others" >Others <br>
+        <!-- Address -->
+        <label for="Address">Enter your Address:</label><br>
+       <textarea name="Address" id="Address" cols="19" rows="2"></textarea><br>
+       <!-- sign-up -->
+       <input type="button" value="Sign-up"> <br>
+    </fieldset>
+    </form>
+    
+</body>
+</html>

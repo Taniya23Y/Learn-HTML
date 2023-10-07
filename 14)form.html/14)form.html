@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Attribute</title>
+</head>
+<body>
+       <div>
+        <h1>The Input Pattern Attribute</h1>
+        <p>The pattern attribute specifes a regular expression that the input element value is checked against.</p>
+        <form action="/action_try.it.again" method="get">
+        <label for="country_code">Country code:</label>
+        <input type="text" id="country_code" name="country_code" pattern="[a-za-z]{3}" title="Three letter country code"><br><br>
+        <input type="submit" value="submit">
+
+        <p><strong>Note:</strong> The pattern attribute of the input tag is not supported in Safari 10 (or earlier).</p>
+        </form>
+       </div>
+</body>
+</html>

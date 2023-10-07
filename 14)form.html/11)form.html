@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Input "datetime-local" type -->
+	<h3>Input "datetime-local" type</h3>
+ <form>
+ 	<label>
+	  Select the meeting schedule: <br><br>
+	  Select date & time: <input type="datetime-local" name="meetingdate"> <br><br>
+	</label>
+	  <input type="submit">
+  </form>
+    <hr>
+    <!-- Input "month" type: -->
+  <h3>Input "month" type:</h3>
+<form>
+	<label>Enter your Birth Month-year: </label>
+	<input type="month" name="newMonth">
+	<input type="submit">
+     <hr>
+     <!-- Input "number" type -->
+    <h3>Input "number" type</h3>
+ <form>
+	<label>Enter your age: </label>
+	<input type="number" name="num" min="50" max="80">
+     <input type="submit">
+</form>
+<p><strong>Note:</strong>It will allow to enter number in range of 50-80. If you want to 
+    enter number other than range, it will show an error.</p>
+    <hr>    
+    <!-- Input "url" type -->
+    <h3>Input "url" type</h3>
+    <form>
+        <label>Enter your website URL: </label>
+        <input type="url" name="website" placeholder="http://example.com"><br>
+        <input type="submit" value="send data">
+        <hr>
+    <!-- Input "week" type -->
+    <h2>Input "week" type</h2>
+    <form>
+            <label><b>Select your best week of year:</b></label><br><br>
+            <input type="week" name="bestweek">
+            <input type="submit" value="Send data">
+    <hr>
+    <!-- Input "email" type -->
+    <h3>Input "email" type</h3>
+    <form>
+		<label><b>Enter your Email-address</b></label>
+        <input type="email" name="email" required>
+        <input type="submit">
+         <p><strong>Note:</strong>User can also enter multiple email addresses separating by comma or whitespace as following: </p>
+         <label><b>Enter multiple Email-addresses</b></label>
+         <input type="email" name="email"  multiple>
+        <input type="submit">
+    </form>
+    <hr>
+    <form>  
+        <label>Enter your Email-address</label><br>  
+        <input type="text" name="uname" autofocus><br><br>  
+         <label>Enter your password</label><br>  
+        <input type="password" name="pass"><br><br>  
+        <input type="submit" value="login">  
+   </form>    
+   <hr>
+   <!-- disabled attribute -->
+   <h3>Registration form</h3>
+    <form>
+	    <label>Enter User name</label><br>
+		<input type="text" name="uname" value="USER"  disabled><br><br>
+		<label>Enter your Email address</label><br>
+		<input type="email" name="email" placeholder="example@gmail.com"><br><br>
+		<label>Enter your password</label><br>
+		<input type="password" name="pass" placeholder="your password"><br><br>
+		<input type="submit" value="login">
+	</form>
+     <hr>
+     <!-- size -->
+     <h3>Registration form with disbaled attribute</h3>
+	<form>
+		<label>Account holder name</label><br>
+		<input type="text" name="uname" size="40" required><br><br>
+		<label>Account number</label><br>
+		<input type="text" name="an" size="30" required><br><br>
+		<label>CVV</label><br>
+		<input type="text" name="cvv" size="1" required><br><br>
+		<input type="submit" value="login">
+	</form>
+    <hr>
+    <!-- fcontrol--form attribute -->
+    <form id="fcontrol">
+		User Name:<br><input type="text" name="uname"><br><br>
+		User password:<br><input type="password" name="pass"><br><br>
+        </form>
+        <p>The email field is outside the form but still it will remain part of the form</p>
+        User email: <br><input type="email" name="email"  form="fcontrol"  required><br>
+        <input type="submit" form="fcontrol">
+    </form>
+</body>
+</html>
