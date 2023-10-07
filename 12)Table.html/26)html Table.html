@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <style>  
+        table, th, td {  
+        border: 1px solid black;  
+        border-collapse: collapse;  
+        }  
+        th, td {  
+        padding: 10px;  
+        }  
+        table#alter tr:nth-child(even) {  
+        background-color: #eee;  
+        }  
+        table#alter tr:nth-child(odd) {  
+        background-color: #fff;  
+        }  
+        table#alter th {  
+        color: white;  
+        background-color: gray;  
+        } 
+        tr:hover{
+            background-color: blue;
+        } 
+</style>
+</head>
+<body>
+       <!-- Hoverable table and Horizontal Divider -->
+       <h2> Hoverable table and Horizontal Divider</h2>
+       <p>Use :hover selector on tr to highlight table rows on mouse over:</p>
+    <table style="width:30%">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Marks</th>
+            <th>percentage</th>
+        </tr>
+        <tr>
+            <td>Jooni</td>
+            <td>Smith</td>
+            <td>97</td>
+            <td>78%</td>
+        </tr>
+        <tr>
+            <td>booby</td>
+            <td>sans</td>
+            <td>95</td>
+            <td>98%</td>
+        </tr>
+        <tr>
+            <td>Lusia</td>
+            <td>Saits</td>
+            <td>90</td>
+            <td>90%</td>
+        </tr>
+        <tr>
+            <td>nusi</td>
+            <td>tats</td>
+            <td>93</td>
+            <td>98%</td>
+        </tr>
+    </table>
+</body>
+</html>
