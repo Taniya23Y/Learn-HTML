@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Styling the body element like body color and margin */
+         
+        body {
+            background-color: #00FA9A;
+            margin: 8%;
+        }
+ 
+        /* Styling the Title and giving shadow to the title */
+        #title {
+            text-align: center;
+            text-shadow: 5px 5px 10px white;
+            font-size: 7vh;
+        }
+ 
+        /* Setting width and display type of image */
+        img {
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            height:auto;
+        }
+
+        /* Setting image in center */
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+ 
+        /* Setting font color and font size of the image-caption */
+        #caption {
+            font-size: 17px;
+            font-family: Gill Sans;
+            color: black;
+            text-align: center;
+        }
+ 
+        /* Styling the content of the page like- padding, font-size, font color etc.*/
+        div#tribute-data {
+            background-color: rgb(46, 139, 87, 0.25);
+            box-shadow: 20px 20px 20px #98FB98;
+            font-family: Georgia;
+            padding: 25px 25px;
+            margin: 11px;
+            margin-top: 50px;
+        }
+ 
+        /* Styling the title of the content */
+        h1.title-APJ {
+            font-size: 35px;
+            color: white;
+            text-align: center;
+            text-shadow: 5px 5px 10px black;
+        }
+ 
+        /* Styling the link provided at the end */
+        #tribute-link {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+ 
+<body>
+    <main id="main">
+ 
+        <!-- Title of the page -->
+        <h1 id="title">
+            A. P. J. Abdul Kalam
+        </h1>
+ 
+        <div id="img">
+ 
+            <!--Image of the Tribute Person-->
+            <img src="data:image/jpeg;base64,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" alt="Error Loading Image" class="center">
+            <br />
+            <small id="caption">
+                Great Indian scientist and
+                politician who played a leading
+                role in the development of India’s
+                missile and nuclear weapons
+                programs.
+            </small>
+        </div>
+ 
+        <div id="tribute-data">
+ 
+            <!--Achievements and other details of the person-->
+            <h1 class="title-APJ">About the Legend </h1>
+ 
+<p>
+                ☛ A.P.J. Abdul Kalam, in full
+                Avul Pakir Jainulabdeen Abdul Kalam,
+                was born on October 15, 1931, in
+                Rameswaram, Tamil Nadu, India.<br><br>
+                ☛ He served as the 11th President
+                of India from 2002 to 2007.<br><br>
+                ☛ Kalam earned a degree in
+                aeronautical engineering from the
+                Madras Institute of Technology and in
+                1958 joined the Defence Research and
+                Development Organisation (DRDO).<br><br>
+                ☛ In 1969, he moved to the Indian
+                Space Research Organisation, where he
+                was project director of the SLV-III, the
+                first satellite launch vehicle that was
+                both designed and produced in India.
+                <br><br> ☛ Rejoining DRDO in 1982,
+                Kalam planned the program that produced
+                a number of successful missiles, which
+                helped earn him the nickname <strong>
+                “Missile Man.”</strong>
+                <br><br> ☛ Among those successes
+                was Agni, India’s first intermediate-range
+                ballistic missile, which incorporated
+                aspects of the SLV-III and was launched
+                in 1989.
+                <br><br> ☛ He also played a
+                pivotal organisational, technical,
+                and political role in India's Pokhran-II
+                nuclear tests in 1998, the first since
+                the original nuclear test by India in 1974.
+                <br><br> ☛ From 1992 to 1997 Kalam
+                was scientific adviser to the defense
+                minister, and he later served as principal
+                scientific adviser (1999–2001) to the
+                government with the rank of cabinet minister.
+                <br><br> ☛ His prominent role in
+                the country’s 1998 nuclear weapons tests
+                solidified India as a nuclear power and
+                established Kalam as a national hero,
+                although the tests caused great concern
+                in the international community.
+                <br><br> ☛ In 1998 Kalam put
+                forward a countrywide plan called
+                Technology Vision 2020, which he described
+                as a road map for transforming India from
+                a less-developed to a developed society
+                in 20 years. The plan called for, among
+                other measures, increasing agricultural
+                productivity, emphasizing technology as
+                a vehicle for economic growth, and
+                widening access to health care and
+                education.
+                <br><br> ☛ Kalam received <b>7</b>
+                honorary doctorates from <b>40</b>
+                universities. The Government of India
+                honoured him with the <b>Padma Bhushan
+                in 1981</b> and the <b>Padma Vibhushan
+                in 1990</b> for his work with ISRO and
+                DRDO and his role as a scientific advisor
+                to the Government.
+                <br><br> ☛ In 1997, Kalam received
+                India's highest civilian honour, the
+                Bharat Ratna, for his contribution to
+                the scientific research and modernisation
+                of defence technology in India.
+                <br><br> ☛ In 2013, he was the
+                recipient of the Von Braun Award from
+                the National Space Society "to recognize
+                excellence in the management and leadership
+                of a space-related project".
+                <br><br> ☛ While delivering a
+                lecture at the Indian Institute of
+                Management Shillong, Kalam collapsed and
+                died from an apparent cardiac arrest on
+                <b>27 July 2015</b>, aged 83.
+                <br><br> ☛ Wheeler Island, a
+                national missile test site in Odisha, was
+                renamed <b>Kalam Island</b> in September
+                2015.
+                <br><br> ☛ A prominent road in
+                New Delhi was renamed from Aurangzeb
+                Road to <b>Dr APJ Abdul Kalam Road</b>
+                in August 2015.
+                <br><br> ☛ In February 2018,
+                scientists from the Botanical Survey
+                of India named a newly found plant
+                species as Drypetes kalamii, in his
+                honour.
+                <br><br><br>
+            </p>
+ 
+ 
+        </div>
+        <br>
+            For more information,check out <a id="tribute-link" href="#">
+            <b>A.P.J. Abdul Kalam</b> on Wikipedia. [
+            <small>Developed by @<a href="#">
+                    Taniya Yadav.</a></a>
+        </small>]
+    </main>
+</body>
+ 
+</html>
