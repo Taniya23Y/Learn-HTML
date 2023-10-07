@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML URL Encode</title>
+  </head>
+  <body>
+    <h1>HTML Uniform Resource Locators</h1>
+    <p>A URL is another word for a web address.</p>
+    <p>
+      A URL can be composed of words (e.g. w3schools.com), or an Internet
+      Protocol (IP) address (e.g. 192.68.20.50).
+    </p>
+    <p>
+      Most people enter the name when surfing, because names are easier to
+      remember than numbers.
+    </p>
+    <hr />
+    <h2>URL - Uniform Resource Locator</h2>
+    <p>Web browsers request pages from web servers by using a URL.</p>
+    <p>
+      A Uniform Resource Locator (URL) is used to address a document (or other
+      data) on the web.
+    </p>
+    <p>
+      A web address like https://www.w3schools.com/html/default.asp follows
+      these syntax rules:
+    </p>
+    <pre>
+        scheme://prefix.domain:port/path/filename
+    </pre>
+    <ul>
+      <p>Explanation:</p>
+
+      <li>
+        scheme - defines the type of Internet service (most common is http or
+        https)
+      </li>
+      <li>prefix - defines a domain prefix (default for http is www)</li>
+      <li>domain - defines the Internet domain name (like w3schools.com)</li>
+      <li>
+        port - defines the port number at the host (default for http is 80)
+      </li>
+      <li>
+        path - defines a path at the server (If omitted: the root directory of
+        the site)
+      </li>
+      <li>filename - defines the name of a document or resource</li>
+    </ul>
+    <hr />
+    <h2>Common URL Schemes</h2>
+    <p>The table below lists some common schemes:</p>
+    <table border="1px;">
+      <tr>
+        <th>Scheme</th>
+        <th>Short for</th>
+        <th>Used for</th>
+      </tr>
+      <tr>
+        <td>http</td>
+        <td>HyperText Transfer Protocol</td>
+        <td>Common web pages. Not encrypted</td>
+      </tr>
+      <tr>
+        <td>https</td>
+        <td>Secure HyperText Transfer Protocol</td>
+        <td>Secure web pages. Encrypted</td>
+      </tr>
+      <tr>
+        <td>ftp</td>
+        <td>File Transfer Protocol</td>
+        <td>Downloading or uploading files</td>
+      </tr>
+      <tr>
+        <td>file</td>
+        <td></td>
+        <td>A file on your computer</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>URL Encoding</h2>
+    <p>
+      URLs can only be sent over the Internet using the ASCII character-set. If
+      a URL contains characters outside the ASCII set, the URL has to be
+      converted.
+    </p>
+    <p>
+      URL encoding converts non-ASCII characters into a format that can be
+      transmitted over the Internet.
+    </p>
+    <p>
+      URL encoding replaces non-ASCII characters with a "%" followed by
+      hexadecimal digits.
+    </p>
+    <p>
+      URLs cannot contain spaces. URL encoding normally replaces a space with a
+      plus (+) sign, or %20.
+    </p>
+    <hr />
+    <h2>Try It Yourself</h2>
+    <label for="fName"></label>
+    <input type="text" name="" id="" value="Hello Taniya" />
+    <input type="submit" type="button" />
+    <p>
+      If you click "Submit", the browser will URL encode the input before it is
+      sent to the server.
+    </p>
+    <p>A page at the server will display the received input.</p>
+    <p>Try some other input and click Submit again.</p>
+    <hr />
+    <h2>ASCII Encoding Examples</h2>
+    <p>
+      Your browser will encode input, according to the character-set used in
+      your page.
+    </p>
+    <p>The default character-set in HTML5 is UTF-8.</p>
+    <table border="1px;">
+      <tr>
+        <th>Character</th>
+        <th>From Windows-1252</th>
+        <th>From UTF-8</th>
+      </tr>
+
+      <tr>
+        <td>€</td>
+        <td>%80</td>
+        <td>%E2%82%AC</td>
+      </tr>
+      <tr>
+        <td>£</td>
+        <td>%A3</td>
+        <td>%C2%A3</td>
+      </tr>
+      <tr>
+        <td>©</td>
+        <td>%A9</td>
+        <td>%C2%A9</td>
+      </tr>
+      <tr>
+        <td>®</td>
+        <td>%AE</td>
+        <td>%C2%AE</td>
+      </tr>
+      <tr>
+        <td>À</td>
+        <td>%C0</td>
+        <td>%C3%80</td>
+      </tr>
+      <tr>
+        <td>Á</td>
+        <td>%C1</td>
+        <td>%C3%81</td>
+      </tr>
+      <tr>
+        <td>Â</td>
+        <td>%C2</td>
+        <td>%C3%82</td>
+      </tr>
+      <tr>
+        <td>Ã</td>
+        <td>%C3</td>
+        <td>%C3%83</td>
+      </tr>
+      <tr>
+        <td>Ä</td>
+        <td>%C4</td>
+        <td>%C3%84</td>
+      </tr>
+      <tr>
+        <td>Å</td>
+        <td>%C5</td>
+        <td>%C3%85</td>
+      </tr>
+    </table>
+  </body>
+</html>
